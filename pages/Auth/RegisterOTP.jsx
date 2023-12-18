@@ -16,7 +16,7 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 import { SelectList } from "react-native-dropdown-select-list";
 
 SplashScreen.preventAutoHideAsync();
-const Login = () => {
+const RegisterOTP = () => {
   const [selected, setSelected] = useState("");
 
   const data = [
@@ -121,7 +121,7 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default RegisterOTP;
 
 const styles = StyleSheet.create({
   main_container: {

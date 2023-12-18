@@ -1,8 +1,9 @@
 import { SafeAreaView, StyleSheet, Text } from "react-native";
-import Login from "./pages/Auth/Login";
+
+import RegisterOTP from "./pages/Auth/RegisterOTP";
 
 export default function App() {
-  return <Login />;
+  return <RegisterOTP />;
 }
 
 const styles = StyleSheet.create({
