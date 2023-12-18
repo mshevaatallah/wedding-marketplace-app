@@ -42,6 +42,17 @@ const RegisterOTP = ({ navigation }) => {
   if (!fontsLoaded) {
     return null;
   }
+
+  const handlePress = () => {
+    if (value.length < 11) {
+      alert("Nomor telepon harus lebih dari 11 digit");
+    } else {
+      navigation.navigate("InputOTP", {
+        value: value,
+        selected: selected,
+      });
+    }
+  };
   return (
     <SafeAreaView style={styles.main_container} onLayout={onLayoutRootView}>
       <StatusBar style="dark" />
@@ -110,14 +121,7 @@ const RegisterOTP = ({ navigation }) => {
             ></TextInput>
           </View>
         </ScrollView>
-        <Pressable
-          onPress={() =>
-            navigation.navigate("InputOTP", {
-              value: value,
-              selected: selected,
-            })
-          }
-        >
+        <Pressable onPress={handlePress}>
           <View style={styles.button_style}>
             <Text style={{ fontFamily: "JakartaExtraB", color: "white" }}>
               Lanjutkan
