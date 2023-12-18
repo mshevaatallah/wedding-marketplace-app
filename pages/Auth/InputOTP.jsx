@@ -14,7 +14,8 @@ import { useFonts } from "expo-font";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import * as SplashScreen from "expo-splash-screen";
 import OTPInputView from "@twotalltotems/react-native-otp-input";
-const InputOTP = () => {
+const InputOTP = ({ route, navigation }) => {
+  const { value, selected } = route.params;
   const [fontsLoaded] = useFonts({
     JakartaRegular: require("../../assets/fonts/JakartaRegular.ttf"),
     JakartaExtraB: require("../../assets/fonts/JakartaExtraB.ttf"),
@@ -32,7 +33,12 @@ const InputOTP = () => {
   return (
     <SafeAreaView onLayout={onLayoutRootView} style={styles.main_container}>
       <StatusBar style="dark" />
-      <Ionicons name="arrow-back-outline" size={35} />
+      <Ionicons
+        name="arrow-back-outline"
+        size={35}
+        suppressHighlighting={true}
+        onPress={() => navigation.goBack()}
+      />
       <KeyboardAvoidingView behavior={"padding"} style={{ flex: 1 }}>
         <ScrollView>
           <View>
@@ -52,7 +58,7 @@ const InputOTP = () => {
                 marginTop: 15,
               }}
             >
-              (+62) 0871399919
+              ({selected}) {value}
             </Text>
           </View>
           <OTPInputView

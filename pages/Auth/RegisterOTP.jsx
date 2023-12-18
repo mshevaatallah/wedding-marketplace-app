@@ -16,9 +16,9 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 import { SelectList } from "react-native-dropdown-select-list";
 
 SplashScreen.preventAutoHideAsync();
-const RegisterOTP = () => {
+const RegisterOTP = ({ navigation }) => {
   const [selected, setSelected] = useState("");
-
+  const [value, setValue] = useState("");
   const data = [
     { key: "1", value: "+62", selected: true },
     { key: "2", value: "+65" },
@@ -78,7 +78,7 @@ const RegisterOTP = () => {
           <View style={styles.number_container}>
             <View style={styles.region_code}>
               <SelectList
-                setSelected={(val) => setSelected(val)}
+                setSelected={setSelected}
                 data={data}
                 defaultOption={data[0]}
                 search={false}
@@ -106,10 +106,18 @@ const RegisterOTP = () => {
               keyboardType="numeric"
               maxLength={12}
               style={styles.number_code}
+              onChange={(e) => setValue(e.nativeEvent.text)}
             ></TextInput>
           </View>
         </ScrollView>
-        <Pressable>
+        <Pressable
+          onPress={() =>
+            navigation.navigate("InputOTP", {
+              value: value,
+              selected: selected,
+            })
+          }
+        >
           <View style={styles.button_style}>
             <Text style={{ fontFamily: "JakartaExtraB", color: "white" }}>
               Lanjutkan
