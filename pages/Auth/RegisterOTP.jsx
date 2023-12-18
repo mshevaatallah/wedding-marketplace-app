@@ -140,7 +140,7 @@ const styles = StyleSheet.create({
     borderRadius: 15,
   },
   number_code: {
-    width: "70%",
+    width: "72%",
     height: 65,
     backgroundColor: "#e1e3e8",
     fontFamily: "JakartaMedium",
