@@ -4,6 +4,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import RegisterOTP from "./pages/Auth/RegisterOTP";
 import InputOTP from "./pages/Auth/InputOTP";
 import RegisterAccount from "./pages/Auth/RegisterAccount";
+import Login from "./pages/Auth/Login";
 const Stack = createNativeStackNavigator();
 export default function App() {
   return (
@@ -22,6 +23,11 @@ export default function App() {
         <Stack.Screen
           name="InputOTP"
           component={InputOTP}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Login"
+          component={Login}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

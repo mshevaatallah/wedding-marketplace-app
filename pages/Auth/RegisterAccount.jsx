@@ -79,6 +79,8 @@ const RegisterAccount = ({ navigation }) => {
                 Nama Depan
               </Text>
               <TextInput
+                autoFocus={true}
+                placeholder="John"
                 onFocus={() => {
                   //change border color
                   setColors(true);
@@ -116,6 +118,7 @@ const RegisterAccount = ({ navigation }) => {
                 Nama Belakang
               </Text>
               <TextInput
+                placeholder="Doe"
                 onFocus={() => {
                   //change border color
                   setColors2(true);
@@ -150,6 +153,7 @@ const RegisterAccount = ({ navigation }) => {
               Email
             </Text>
             <TextInput
+              placeholder="johndoe@gmail.com"
               onFocus={() => {
                 //change border color
                 setColors3(true);

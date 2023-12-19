@@ -16,7 +16,7 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 import { SelectList } from "react-native-dropdown-select-list";
 
 SplashScreen.preventAutoHideAsync();
-const RegisterOTP = ({ navigation }) => {
+const Login = ({ navigation }) => {
   const [selected, setSelected] = useState("+62");
   const [value, setValue] = useState("");
   const data = [
@@ -42,7 +42,6 @@ const RegisterOTP = ({ navigation }) => {
   if (!fontsLoaded) {
     return null;
   }
-
   const handlePress = () => {
     if (value.length < 11) {
       alert("Nomor telepon harus lebih dari 11 digit");
@@ -55,7 +54,7 @@ const RegisterOTP = ({ navigation }) => {
   };
 
   return (
-    <SafeAreaView style={styles.main_container} onLayout={onLayoutRootView}>
+    <SafeAreaView onLayout={onLayoutRootView} style={styles.main_container}>
       <StatusBar style="dark" />
       <Ionicons
         name="arrow-back-outline"
@@ -70,35 +69,22 @@ const RegisterOTP = ({ navigation }) => {
               style={{
                 fontFamily: "JakartaExtraB",
                 fontSize: 30,
-                marginTop: 15,
+                marginTop: 20,
+                marginBottom: 10,
               }}
             >
-              Verifikasi OTP
+              Masuk
             </Text>
             <Text
               style={{
                 fontFamily: "JakartaRegular",
-                maxWidth: "90%",
-                marginTop: 10,
-                color: "grey",
+                fontSize: 16,
+                color: "#9B9B9B",
               }}
             >
-              Masukan nomor telepon anda. Kami akan mengirimkan kode OTP
+              Masukkan nomor telepon yang terdaftar
             </Text>
-            <View style={{ marginTop: 15 }}>
-              <Text style={{ fontFamily: "JakartaMedium", color: "#FF4F6F" }}>
-                Sudah punya akun?{" "}
-                <Text
-                  suppressHighlighting={true}
-                  onPress={() => navigation.navigate("Login")}
-                >
-                  {" "}
-                  Log in
-                </Text>
-              </Text>
-            </View>
           </View>
-
           <View style={styles.number_container}>
             <View style={styles.region_code}>
               <SelectList
@@ -134,20 +120,59 @@ const RegisterOTP = ({ navigation }) => {
               onChange={(e) => setValue(e.nativeEvent.text)}
             ></TextInput>
           </View>
-        </ScrollView>
-        <Pressable onPress={handlePress}>
-          <View style={styles.button_style}>
-            <Text style={{ fontFamily: "JakartaExtraB", color: "white" }}>
-              Lanjutkan
-            </Text>
+          <Text
+            style={{
+              fontFamily: "JakartaExtraB",
+              fontSize: 12,
+              color: "#FF4F6F",
+              marginBottom: 20,
+              textDecorationLine: "underline",
+            }}
+          >
+            Tidak bisa masuk dengan nomor telepon
+          </Text>
+          <Pressable onPress={handlePress}>
+            <View style={styles.button_style}>
+              <Text style={{ fontFamily: "JakartaExtraB", color: "white" }}>
+                Lanjutkan
+              </Text>
+            </View>
+          </Pressable>
+          <Text
+            style={{
+              fontFamily: "JakartaExtraB",
+              fontSize: 12,
+              color: "#9B9B9B",
+              textAlign: "center",
+              marginBottom: 20,
+              marginTop: 20,
+            }}
+          >
+            atau
+          </Text>
+          <View
+            style={{
+              flexDirection: "row",
+              justifyContent: "center",
+            }}
+          >
+            <View style={styles.box_icons}>
+              <Ionicons name="logo-apple" size={25} />
+            </View>
+            <View style={styles.box_icons2}>
+              <Ionicons name="logo-facebook" size={25} color={"white"} />
+            </View>
+            <View style={styles.box_icons3}>
+              <Ionicons name="mail-outline" size={25} color={"#F4776C"} />
+            </View>
           </View>
-        </Pressable>
+        </ScrollView>
       </KeyboardAvoidingView>
     </SafeAreaView>
   );
 };
 
-export default RegisterOTP;
+export default Login;
 
 const styles = StyleSheet.create({
   main_container: {
@@ -158,6 +183,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     marginTop: 40,
+    marginBottom: 20,
   },
   region_code: {
     width: "25%",
@@ -183,5 +209,35 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     marginBottom: 15,
+  },
+  box_icons: {
+    width: 60,
+    height: 60,
+    backgroundColor: "#E2E2E2",
+    borderRadius: 15,
+    alignItems: "center",
+    justifyContent: "center",
+    borderColor: "transparent",
+    marginRight: 15,
+  },
+  box_icons2: {
+    width: 60,
+    height: 60,
+    backgroundColor: "#3b5998",
+    borderRadius: 15,
+    alignItems: "center",
+    justifyContent: "center",
+    borderColor: "transparent",
+    marginRight: 15,
+  },
+  box_icons3: {
+    width: 60,
+    height: 60,
+    backgroundColor: "#FFFFFF",
+    borderRadius: 15,
+    alignItems: "center",
+    justifyContent: "center",
+    borderColor: "#E2E2E2",
+    borderWidth: 1,
   },
 });
