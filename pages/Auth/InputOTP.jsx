@@ -21,6 +21,7 @@ const InputOTP = ({ route, navigation }) => {
     JakartaExtraB: require("../../assets/fonts/JakartaExtraB.ttf"),
     JakartaMedium: require("../../assets/fonts/JakartaMedium.ttf"),
   });
+  const [code, setCode] = useState("");
   const onLayoutRootView = useCallback(async () => {
     if (fontsLoaded) {
       await SplashScreen.hideAsync();
@@ -30,6 +31,14 @@ const InputOTP = ({ route, navigation }) => {
   if (!fontsLoaded) {
     return null;
   }
+  const handlePress = () => {
+    if (code.length < 4) {
+      alert("Kode OTP harus 4 digit");
+    } else {
+      navigation.navigate("RegisterAccount");
+    }
+  };
+
   return (
     <SafeAreaView onLayout={onLayoutRootView} style={styles.main_container}>
       <StatusBar style="dark" />
@@ -74,7 +83,7 @@ const InputOTP = ({ route, navigation }) => {
             codeInputFieldStyle={styles.underlineStyleBase}
             codeInputHighlightStyle={styles.underlineStyleHighLighted}
             onCodeFilled={(code) => {
-              console.log(`Code is ${code}, you are good to go!`);
+              setCode(code);
             }}
           />
           <Text style={{ fontFamily: "JakartaMedium", fontSize: 13 }}>
@@ -82,7 +91,7 @@ const InputOTP = ({ route, navigation }) => {
             <Text style={{ color: "#FF4F6F" }}> Kirim ulang</Text>
           </Text>
         </ScrollView>
-        <Pressable>
+        <Pressable onPress={handlePress}>
           <View style={styles.button_style}>
             <Text style={{ fontFamily: "JakartaExtraB", color: "white" }}>
               Lanjutkan

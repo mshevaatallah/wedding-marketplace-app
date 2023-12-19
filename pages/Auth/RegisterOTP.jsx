@@ -17,10 +17,10 @@ import { SelectList } from "react-native-dropdown-select-list";
 
 SplashScreen.preventAutoHideAsync();
 const RegisterOTP = ({ navigation }) => {
-  const [selected, setSelected] = useState("");
+  const [selected, setSelected] = useState("+62");
   const [value, setValue] = useState("");
   const data = [
-    { key: "1", value: "+62", selected: true },
+    { key: "1", value: "+62" },
     { key: "2", value: "+65" },
     { key: "3", value: "+88" },
     { key: "4", value: "+95" },
@@ -53,10 +53,15 @@ const RegisterOTP = ({ navigation }) => {
       });
     }
   };
+
   return (
     <SafeAreaView style={styles.main_container} onLayout={onLayoutRootView}>
       <StatusBar style="dark" />
-      <Ionicons name="arrow-back-outline" size={35} />
+      <Ionicons
+        name="arrow-back-outline"
+        size={35}
+        suppressHighlighting={true}
+      />
       <KeyboardAvoidingView behavior={"padding"} style={{ flex: 1 }}>
         <ScrollView>
           <View>
@@ -91,9 +96,10 @@ const RegisterOTP = ({ navigation }) => {
               <SelectList
                 setSelected={setSelected}
                 data={data}
-                defaultOption={data[0]}
                 search={false}
+                defaultOption={data[0].value}
                 arrowicon={false}
+                placeholder="+62"
                 save="value"
                 fontFamily="JakartaMedium"
                 boxStyles={{
