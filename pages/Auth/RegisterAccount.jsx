@@ -55,6 +55,29 @@ const RegisterAccount = ({ navigation }) => {
             >
               Buatlah akun mu !
             </Text>
+            <Text
+              style={{
+                fontFamily: "JakartaMedium",
+                fontSize: 12,
+                marginTop: 10,
+                color: "#AEAFB1",
+              }}
+            >
+              Sudah punya akun ?{" "}
+              <Text
+                style={{
+                  color: "#FF4F6F",
+                  fontFamily: "JakartaExtraB",
+                  marginLeft: 1,
+                  textDecorationLine: "underline",
+                }}
+                suppressHighlighting={true}
+                onPress={() => navigation.navigate("Login")}
+              >
+                {" "}
+                Masuk disini
+              </Text>
+            </Text>
           </View>
           <View
             style={{

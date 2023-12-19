@@ -87,14 +87,7 @@ const RegisterOTP = ({ navigation }) => {
             </Text>
             <View style={{ marginTop: 15 }}>
               <Text style={{ fontFamily: "JakartaMedium", color: "#FF4F6F" }}>
-                Sudah punya akun?{" "}
-                <Text
-                  suppressHighlighting={true}
-                  onPress={() => navigation.navigate("Login")}
-                >
-                  {" "}
-                  Log in
-                </Text>
+                Tidak menerima kode OTP?{" "}
               </Text>
             </View>
           </View>
