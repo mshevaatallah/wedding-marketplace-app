@@ -5,6 +5,7 @@ import RegisterOTP from "./pages/Auth/RegisterOTP";
 import InputOTP from "./pages/Auth/InputOTP";
 import RegisterAccount from "./pages/Auth/RegisterAccount";
 import Login from "./pages/Auth/Login";
+import LoginEmail from "./pages/Auth/LoginEmail";
 const Stack = createNativeStackNavigator();
 export default function App() {
   return (
@@ -28,6 +29,11 @@ export default function App() {
         <Stack.Screen
           name="Login"
           component={Login}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="LoginEmail"
+          component={LoginEmail}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

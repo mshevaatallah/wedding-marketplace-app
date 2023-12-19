@@ -86,7 +86,10 @@ const InputOTP = ({ route, navigation }) => {
           />
           <Text style={{ fontFamily: "JakartaMedium", fontSize: 13 }}>
             Belum mendapatkan kode?{" "}
-            <Text style={{ color: "#FF4F6F" }}> Kirim ulang</Text>
+            <Text style={{ color: "#FF4F6F", textDecorationLine: "underline" }}>
+              {" "}
+              Kirim ulang
+            </Text>
           </Text>
         </ScrollView>
         <Pressable onPress={handlePress}>

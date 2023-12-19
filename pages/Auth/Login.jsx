@@ -121,6 +121,7 @@ const Login = ({ navigation }) => {
             ></TextInput>
           </View>
           <Text
+            suppressHighlighting={true}
             style={{
               fontFamily: "JakartaExtraB",
               fontSize: 12,
@@ -128,6 +129,7 @@ const Login = ({ navigation }) => {
               marginBottom: 20,
               textDecorationLine: "underline",
             }}
+            onPress={() => navigation.navigate("LoginEmail")}
           >
             Tidak bisa masuk dengan nomor telepon
           </Text>
@@ -162,9 +164,12 @@ const Login = ({ navigation }) => {
             <View style={styles.box_icons2}>
               <Ionicons name="logo-facebook" size={25} color={"white"} />
             </View>
-            <View style={styles.box_icons3}>
+            <Pressable
+              style={styles.box_icons3}
+              onPress={() => navigation.navigate("LoginEmail")}
+            >
               <Ionicons name="mail-outline" size={25} color={"#F4776C"} />
-            </View>
+            </Pressable>
           </View>
         </ScrollView>
       </KeyboardAvoidingView>
