@@ -10,6 +10,11 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
+          name="RegisterAccount"
+          component={RegisterAccount}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
           name="RegisterOTP"
           component={RegisterOTP}
           options={{ headerShown: false }}
@@ -17,11 +22,6 @@ export default function App() {
         <Stack.Screen
           name="InputOTP"
           component={InputOTP}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
-          name="RegisterAccount"
-          component={RegisterAccount}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

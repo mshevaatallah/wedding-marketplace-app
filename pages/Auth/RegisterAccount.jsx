@@ -14,7 +14,7 @@ import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 import Ionicons from "@expo/vector-icons/Ionicons";
 
-const RegisterAccount = () => {
+const RegisterAccount = ({ navigation }) => {
   const [fontsLoaded] = useFonts({
     JakartaRegular: require("../../assets/fonts/JakartaRegular.ttf"),
     JakartaExtraB: require("../../assets/fonts/JakartaExtraB.ttf"),
@@ -32,6 +32,9 @@ const RegisterAccount = () => {
   if (!fontsLoaded) {
     return null;
   }
+  const handlePress = () => {
+    navigation.navigate("RegisterOTP");
+  };
   return (
     <SafeAreaView onLayout={onLayoutRootView} style={styles.main_container}>
       <StatusBar style="dark" />
@@ -237,7 +240,7 @@ const RegisterAccount = () => {
             />
           </View>
         </ScrollView>
-        <Pressable>
+        <Pressable onPress={handlePress}>
           <View style={styles.button_style}>
             <Text style={{ fontFamily: "JakartaExtraB", color: "white" }}>
               Lanjutkan

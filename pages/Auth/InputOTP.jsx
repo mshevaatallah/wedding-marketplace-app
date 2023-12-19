@@ -34,8 +34,6 @@ const InputOTP = ({ route, navigation }) => {
   const handlePress = () => {
     if (code.length < 4) {
       alert("Kode OTP harus 4 digit");
-    } else {
-      navigation.navigate("RegisterAccount");
     }
   };
 
