@@ -42,6 +42,7 @@ const RegisterAccount = ({ navigation }) => {
         name="arrow-back-outline"
         size={35}
         suppressHighlighting={true}
+        onPress={() => navigation.goBack()}
       />
       <KeyboardAvoidingView behavior={"padding"} style={{ flex: 1 }}>
         <ScrollView showsVerticalScrollIndicator={false} style={{}}>
