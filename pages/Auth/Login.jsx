@@ -190,6 +190,7 @@ const styles = StyleSheet.create({
     marginTop: 40,
     marginBottom: 20,
     zIndex: 1000000,
+    elevation: 1000000,
   },
   region_code: {
     width: "25%",
