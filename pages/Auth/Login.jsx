@@ -189,6 +189,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     marginTop: 40,
     marginBottom: 20,
+    zIndex: 1000000,
   },
   region_code: {
     width: "25%",
