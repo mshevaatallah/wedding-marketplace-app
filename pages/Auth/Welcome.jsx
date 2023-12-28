@@ -36,11 +36,12 @@ const Welcome = ({ navigation }) => {
         <ImageBackground
           source={bg_image}
           resizeMode="cover"
-          imageStyle={{ borderEndStartRadius: 30, borderBottomEndRadius: 30 }}
           style={{
             flex: 1,
             width: "100%",
             height: "100%",
+            borderEndStartRadius: 20,
+            borderBottomEndRadius: 20,
           }}
         ></ImageBackground>
       </View>
@@ -70,8 +71,6 @@ const styles = StyleSheet.create({
   image_container: {
     width: "100%",
     height: "85%",
-    borderEndStartRadius: 30,
-    borderBottomEndRadius: 30,
 
     resizeMode: "cover",
     justifyContent: "center",

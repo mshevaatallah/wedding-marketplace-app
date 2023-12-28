@@ -9,11 +9,13 @@ import {
 } from "react-native";
 
 import { StatusBar } from "expo-status-bar";
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useContext, useState } from "react";
 import { useFonts } from "expo-font";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import * as SplashScreen from "expo-splash-screen";
 import OTPInputView from "@twotalltotems/react-native-otp-input";
+import { Context } from "../navigation";
+
 const InputOTP = ({ route, navigation }) => {
   const { value, selected } = route.params;
   const [fontsLoaded] = useFonts({
@@ -21,6 +23,7 @@ const InputOTP = ({ route, navigation }) => {
     JakartaExtraB: require("../../assets/fonts/JakartaExtraB.ttf"),
     JakartaMedium: require("../../assets/fonts/JakartaMedium.ttf"),
   });
+  const { isLogged, toggleLogged } = useContext(Context);
   const [code, setCode] = useState("");
   const onLayoutRootView = useCallback(async () => {
     if (fontsLoaded) {
@@ -34,6 +37,8 @@ const InputOTP = ({ route, navigation }) => {
   const handlePress = () => {
     if (code.length < 4) {
       alert("Kode OTP harus 4 digit");
+    } else {
+      toggleLogged();
     }
   };
 

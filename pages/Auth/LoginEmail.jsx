@@ -9,10 +9,11 @@ import {
   ScrollView,
 } from "react-native";
 import { StatusBar } from "expo-status-bar";
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useContext, useState } from "react";
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 import Ionicons from "@expo/vector-icons/Ionicons";
+import { Context } from "../navigation";
 
 SplashScreen.preventAutoHideAsync();
 const LoginEmail = ({ navigation }) => {
@@ -22,7 +23,7 @@ const LoginEmail = ({ navigation }) => {
     JakartaMedium: require("../../assets/fonts/JakartaMedium.ttf"),
   });
   const [color, setColors] = useState(false);
-
+  const { toggleLogged } = useContext(Context);
   const [color3, setColors3] = useState(false);
   const onLayoutRootView = useCallback(async () => {
     if (fontsLoaded) {
@@ -34,7 +35,7 @@ const LoginEmail = ({ navigation }) => {
     return null;
   }
   const handlePress = () => {
-    console.log("login");
+    toggleLogged();
   };
   return (
     <SafeAreaView onLayout={onLayoutRootView} style={styles.main_container}>
