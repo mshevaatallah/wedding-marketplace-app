@@ -7,43 +7,46 @@ import RegisterAccount from "./pages/Auth/RegisterAccount";
 import Login from "./pages/Auth/Login";
 import LoginEmail from "./pages/Auth/LoginEmail";
 import Welcome from "./pages/Auth/Welcome";
+import AppNavigation from "./pages/navigation";
+
 const Stack = createNativeStackNavigator();
 export default function App() {
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
-          name="Welcome"
-          component={Welcome}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
-          name="RegisterAccount"
-          component={RegisterAccount}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
-          name="RegisterOTP"
-          component={RegisterOTP}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
-          name="InputOTP"
-          component={InputOTP}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
-          name="Login"
-          component={Login}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
-          name="LoginEmail"
-          component={LoginEmail}
-          options={{ headerShown: false }}
-        />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <AppNavigation />
+    // <NavigationContainer>
+    //   <Stack.Navigator>
+    //     <Stack.Screen
+    //       name="Welcome"
+    //       component={Welcome}
+    //       options={{ headerShown: false }}
+    //     />
+    //     <Stack.Screen
+    //       name="RegisterAccount"
+    //       component={RegisterAccount}
+    //       options={{ headerShown: false }}
+    //     />
+    //     <Stack.Screen
+    //       name="RegisterOTP"
+    //       component={RegisterOTP}
+    //       options={{ headerShown: false }}
+    //     />
+    //     <Stack.Screen
+    //       name="InputOTP"
+    //       component={InputOTP}
+    //       options={{ headerShown: false }}
+    //     />
+    //     <Stack.Screen
+    //       name="Login"
+    //       component={Login}
+    //       options={{ headerShown: false }}
+    //     />
+    //     <Stack.Screen
+    //       name="LoginEmail"
+    //       component={LoginEmail}
+    //       options={{ headerShown: false }}
+    //     />
+    //   </Stack.Navigator>
+    // </NavigationContainer>
   );
 }
 
