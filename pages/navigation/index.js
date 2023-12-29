@@ -6,7 +6,6 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { useFonts } from "expo-font";
 import Ionicons from "@expo/vector-icons/Ionicons";
 
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import Home from "../Main/Home";
 import Vendor from "../Main/Vendor";
