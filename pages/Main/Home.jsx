@@ -1,11 +1,18 @@
-import { StyleSheet, Text, View, SafeAreaView, ScrollView } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  SafeAreaView,
+  ScrollView,
+  Pressable,
+} from "react-native";
 import React, { useCallback } from "react";
 import { StatusBar } from "expo-status-bar";
 import { useFonts } from "expo-font";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import Feather from "@expo/vector-icons/Feather";
 import * as SplashScreen from "expo-splash-screen";
-const Home = () => {
+const Home = ({ navigation }) => {
   const [fontsLoaded] = useFonts({
     JakartaRegular: require("../../assets/fonts/JakartaRegular.ttf"),
     JakartaExtraB: require("../../assets/fonts/JakartaExtraB.ttf"),
@@ -87,7 +94,10 @@ const Home = () => {
                 paddingVertical: 10,
               }}
             >
-              <View style={styles.category_box}></View>
+              <Pressable
+                style={styles.category_box}
+                onPress={() => navigation.navigate("Makeup")}
+              ></Pressable>
               <View style={styles.category_box}></View>
               <View style={styles.category_box}></View>
               <View style={styles.category_box}></View>
