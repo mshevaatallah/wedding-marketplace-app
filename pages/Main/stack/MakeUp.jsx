@@ -1,9 +1,16 @@
-import { StyleSheet, Text, View, SafeAreaView, ScrollView } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  SafeAreaView,
+  ScrollView,
+  Pressable,
+} from "react-native";
 import React, { useCallback } from "react";
 import { StatusBar } from "expo-status-bar";
 import { useFonts } from "expo-font";
 import Ionicons from "@expo/vector-icons/Ionicons";
-import Feather from "@expo/vector-icons/Feather";
+
 import * as SplashScreen from "expo-splash-screen";
 const MakeUp = ({ navigation }) => {
   const [fontsLoaded] = useFonts({
@@ -61,7 +68,7 @@ const MakeUp = ({ navigation }) => {
             flexWrap: "wrap",
           }}
         >
-          <View>
+          <Pressable onPress={() => navigation.navigate("MakeupOne")}>
             <View style={styles.box_image}></View>
             <Text
               style={{
@@ -99,7 +106,7 @@ const MakeUp = ({ navigation }) => {
             >
               Mulai Rp.400.000.00
             </Text>
-          </View>
+          </Pressable>
           <View>
             <View style={styles.box_image}></View>
             <Text

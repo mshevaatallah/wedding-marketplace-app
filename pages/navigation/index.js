@@ -18,6 +18,7 @@ import RegisterOTP from "../Auth/RegisterOTP";
 import Login from "../Auth/Login";
 import LoginEmail from "../Auth/LoginEmail";
 import MakeUp from "../Main/stack/MakeUp";
+import MakeUpOne from "../Main/stack/details_makeup/MakeUpOne";
 
 export const Context = React.createContext(null);
 const Stack = createNativeStackNavigator();
@@ -149,6 +150,11 @@ const AppNavigation = () => {
             <Stack.Screen
               name="Makeup"
               component={MakeUp}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="MakeupOne"
+              component={MakeUpOne}
               options={{ headerShown: false }}
             />
           </Stack.Navigator>
