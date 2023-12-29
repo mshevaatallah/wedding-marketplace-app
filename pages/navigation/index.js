@@ -7,6 +7,7 @@ import { useFonts } from "expo-font";
 import Ionicons from "@expo/vector-icons/Ionicons";
 
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import Home from "../Main/Home";
 import Vendor from "../Main/Vendor";
 import Message from "../Main/Message";
@@ -20,7 +21,7 @@ import LoginEmail from "../Auth/LoginEmail";
 
 export const Context = React.createContext(null);
 const Stack = createNativeStackNavigator();
-const Tab = createBottomTabNavigator();
+const Tab = createMaterialBottomTabNavigator();
 const AppNavigation = () => {
   const [fontsLoaded] = useFonts({
     JakartaRegular: require("../../assets/fonts/JakartaRegular.ttf"),
@@ -29,13 +30,15 @@ const AppNavigation = () => {
   });
 
   const screenOptions = {
+    swipeEnabled: true,
+
     tabBarActiveTintColor: "#FF4F6F",
     tabBarInactiveTintColor: "gray",
     tabBarLabelStyle: {
       fontSize: 10,
     },
 
-    tabBarStyle: {
+    barStyle: {
       position: "absolute",
       bottom: 0,
       left: 0,
@@ -60,7 +63,11 @@ const AppNavigation = () => {
   }
   function MyTabs() {
     return (
-      <Tab.Navigator screenOptions={screenOptions}>
+      <Tab.Navigator
+        barStyle={{ paddingTop: 7, backgroundColor: "white", height: 80 }}
+        activeColor="#FF4F6F"
+        inactiveColor="gray"
+      >
         <Tab.Screen
           name="Home"
           component={Home}

@@ -24,7 +24,7 @@ const Home = () => {
   return (
     <SafeAreaView onLayout={onLayoutRootView} style={styles.main_container}>
       <StatusBar style="dark" />
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
         <View
           style={{
             flexDirection: "row",
@@ -78,6 +78,102 @@ const Home = () => {
             </Text>
             <Ionicons name="ellipsis-horizontal-outline" size={25} />
           </View>
+
+          <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+            <View
+              style={{
+                marginTop: 20,
+                flexDirection: "row",
+                paddingVertical: 10,
+              }}
+            >
+              <View style={styles.category_box}></View>
+              <View style={styles.category_box}></View>
+              <View style={styles.category_box}></View>
+              <View style={styles.category_box}></View>
+            </View>
+          </ScrollView>
+          <View style={{ marginTop: 20 }}>
+            <Text
+              style={{
+                fontFamily: "JakartaBold",
+                fontSize: 20,
+                marginBottom: 20,
+              }}
+            >
+              Promo menarik
+            </Text>
+            <View style={styles.promo_box}></View>
+          </View>
+          <View style={{ marginTop: 29, marginBottom: 30 }}>
+            <Text
+              style={{
+                fontFamily: "JakartaBold",
+                fontSize: 16,
+                marginBottom: 20,
+              }}
+            >
+              Ini cocok buat kamu lho!
+            </Text>
+            <View>
+              <ScrollView
+                horizontal={true}
+                showsHorizontalScrollIndicator={false}
+              >
+                <View
+                  style={{
+                    marginTop: 0,
+                    flexDirection: "row",
+                  }}
+                >
+                  <View style={styles.cocok_box}>
+                    <View
+                      style={{
+                        width: "100%",
+                        height: 100,
+                        backgroundColor: "white",
+                        borderTopLeftRadius: 10,
+                        borderTopRightRadius: 10,
+                      }}
+                    ></View>
+                  </View>
+                  <View style={styles.cocok_box}>
+                    <View
+                      style={{
+                        width: "100%",
+                        height: 100,
+                        backgroundColor: "white",
+                        borderTopLeftRadius: 10,
+                        borderTopRightRadius: 10,
+                      }}
+                    ></View>
+                  </View>
+                  <View style={styles.cocok_box}>
+                    <View
+                      style={{
+                        width: "100%",
+                        height: 100,
+                        backgroundColor: "white",
+                        borderTopLeftRadius: 10,
+                        borderTopRightRadius: 10,
+                      }}
+                    ></View>
+                  </View>
+                  <View style={styles.cocok_box}>
+                    <View
+                      style={{
+                        width: "100%",
+                        height: 100,
+                        backgroundColor: "white",
+                        borderTopLeftRadius: 10,
+                        borderTopRightRadius: 10,
+                      }}
+                    ></View>
+                  </View>
+                </View>
+              </ScrollView>
+            </View>
+          </View>
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -90,5 +186,25 @@ const styles = StyleSheet.create({
   main_container: {
     marginHorizontal: 20,
     flex: 1,
+  },
+  category_box: {
+    width: 130,
+    height: 100,
+    backgroundColor: "red",
+    borderRadius: 10,
+    marginRight: 10,
+  },
+  promo_box: {
+    width: "100%",
+    height: 150,
+    backgroundColor: "red",
+    borderRadius: 10,
+  },
+  cocok_box: {
+    width: 150,
+    height: 200,
+    backgroundColor: "red",
+    borderRadius: 10,
+    marginRight: 10,
   },
 });
