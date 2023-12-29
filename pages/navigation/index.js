@@ -8,7 +8,7 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import Home from "../Main/Home";
-import Vendor from "../Main/Vendor";
+import Transaksi from "../Main/Transaksi";
 import Message from "../Main/Message";
 import Profile from "../Main/Profile";
 import InputOTP from "../Auth/InputOTP";
@@ -84,14 +84,14 @@ const AppNavigation = () => {
           }}
         />
         <Tab.Screen
-          name="Vendors"
-          component={Vendor}
+          name="Transaksi"
+          component={Transaksi}
           options={{
-            tabBarLabel: "Vendor",
+            tabBarLabel: "Transaksi",
             headerShown: false,
             tabBarIcon: ({ color, size, focused }) => (
               <Ionicons
-                name={focused ? "file-tray-full" : "file-tray-full-outline"}
+                name={focused ? "receipt" : "receipt-outline"}
                 color={color}
                 size={20}
               />

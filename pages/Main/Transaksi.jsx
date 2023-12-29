@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 
-const Vendor = () => {
+const Transaksi = () => {
   return (
     <View>
       <Text>Vendor</Text>
@@ -9,6 +9,6 @@ const Vendor = () => {
   );
 };
 
-export default Vendor;
+export default Transaksi;
 
 const styles = StyleSheet.create({});
