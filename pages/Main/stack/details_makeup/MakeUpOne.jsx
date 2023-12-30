@@ -41,16 +41,49 @@ const MakeUpOne = ({ navigation }) => {
             suppressHighlighting={true}
             onPress={() => navigation.goBack()}
           />
-          <Ionicons
-            name="heart-outline"
-            size={35}
-            suppressHighlighting={true}
-          />
+          <Text
+            style={{
+              fontFamily: "JakartaExtraB",
+              fontSize: 20,
+
+              color: "#24282c",
+              letterSpacing: 1,
+            }}
+          >
+            Detail
+          </Text>
+          <Ionicons name="ellipsis-horizontal-outline" size={35} />
         </View>
         <ScrollView></ScrollView>
       </View>
 
-      <View style={styles.bottom_bar}></View>
+      <View style={styles.bottom_bar}>
+        <View
+          style={{
+            width: 60,
+            height: 60,
+            borderRadius: 10,
+            borderColor: "#FF4F6F",
+            borderWidth: 1,
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Ionicons name="heart-outline" size={30} color={"#FF4F6F"} />
+        </View>
+
+        <View style={styles.button_beli}>
+          <Text
+            style={{
+              fontFamily: "JakartaExtraB",
+              fontSize: 16,
+              color: "#fff",
+            }}
+          >
+            Beli sekarang
+          </Text>
+        </View>
+      </View>
     </SafeAreaView>
   );
 };
@@ -65,7 +98,20 @@ const styles = StyleSheet.create({
     position: "absolute",
     bottom: 0,
     width: "100%",
-    height: 100,
-    backgroundColor: "pink",
+    height: 120,
+    borderTopWidth: 1,
+    borderTopColor: "#E5E5E5",
+    paddingHorizontal: 20,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-around",
+  },
+  button_beli: {
+    width: "70%",
+    height: 60,
+    backgroundColor: "#FF4F6F",
+    borderRadius: 10,
+    justifyContent: "center",
+    alignItems: "center",
   },
 });

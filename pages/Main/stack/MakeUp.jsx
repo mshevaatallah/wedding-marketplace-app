@@ -37,6 +37,7 @@ const MakeUp = ({ navigation }) => {
           alignItems: "center",
           justifyContent: "space-between",
           marginTop: 10,
+          marginBottom: 20,
         }}
       >
         <Ionicons
@@ -68,7 +69,10 @@ const MakeUp = ({ navigation }) => {
             flexWrap: "wrap",
           }}
         >
-          <Pressable onPress={() => navigation.navigate("MakeupOne")}>
+          <Pressable
+            onPress={() => navigation.navigate("MakeupOne")}
+            style={styles.View_container}
+          >
             <View style={styles.box_image}></View>
             <Text
               style={{
@@ -104,10 +108,10 @@ const MakeUp = ({ navigation }) => {
                 marginBottom: 5,
               }}
             >
-              Mulai Rp.400.000.00
+              Mulai Rp.400.000
             </Text>
           </Pressable>
-          <View>
+          <View style={styles.View_container}>
             <View style={styles.box_image}></View>
             <Text
               style={{
@@ -143,10 +147,10 @@ const MakeUp = ({ navigation }) => {
                 marginBottom: 5,
               }}
             >
-              Mulai Rp.400.000.00
+              Mulai Rp.400.000
             </Text>
           </View>
-          <View>
+          <View style={styles.View_container}>
             <View style={styles.box_image}></View>
             <Text
               style={{
@@ -158,7 +162,7 @@ const MakeUp = ({ navigation }) => {
                 marginTop: 10,
               }}
             >
-              The Beauty Salon
+              Davinci Artist
             </Text>
             <Text
               style={{
@@ -170,7 +174,7 @@ const MakeUp = ({ navigation }) => {
                 marginBottom: 10,
               }}
             >
-              Banjar Baru, Kalimanatan Selatan
+              Dago, Bandung
             </Text>
             <Text
               style={{
@@ -182,10 +186,10 @@ const MakeUp = ({ navigation }) => {
                 marginBottom: 5,
               }}
             >
-              Mulai Rp.400.000.00
+              Mulai Rp.400.000
             </Text>
           </View>
-          <View>
+          <View style={styles.View_container}>
             <View style={styles.box_image}></View>
             <Text
               style={{
@@ -197,7 +201,7 @@ const MakeUp = ({ navigation }) => {
                 marginTop: 10,
               }}
             >
-              The Beauty Salon
+              Ameeera Beauty
             </Text>
             <Text
               style={{
@@ -209,7 +213,7 @@ const MakeUp = ({ navigation }) => {
                 marginBottom: 10,
               }}
             >
-              Banjar Baru, Kalimanatan Selatan
+              Clincing, Jakarta Utara
             </Text>
             <Text
               style={{
@@ -221,7 +225,7 @@ const MakeUp = ({ navigation }) => {
                 marginBottom: 5,
               }}
             >
-              Mulai Rp.400.000.00
+              Mulai Rp.400.000
             </Text>
           </View>
         </View>
@@ -238,11 +242,12 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   box_image: {
-    width: "100%",
+    width: 150,
     height: 170,
     borderRadius: 10,
     backgroundColor: "#D59C9C",
-    marginRight: 15,
-    marginTop: 20,
+  },
+  View_container: {
+    marginBottom: 40,
   },
 });
