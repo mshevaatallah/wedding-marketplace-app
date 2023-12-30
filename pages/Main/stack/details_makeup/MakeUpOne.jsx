@@ -52,16 +52,25 @@ const MakeUpOne = ({ navigation }) => {
           >
             Detail
           </Text>
-          <Ionicons name="ellipsis-horizontal-outline" size={35} />
+          <Ionicons name="heart-outline" size={35} />
         </View>
-        <ScrollView></ScrollView>
+        <ScrollView>
+          <View
+            style={{
+              width: "100%",
+              height: 300,
+              marginTop: 20,
+              backgroundColor: "#E5E5E5",
+            }}
+          ></View>
+        </ScrollView>
       </View>
 
       <View style={styles.bottom_bar}>
         <View
           style={{
-            width: 60,
-            height: 60,
+            width: 50,
+            height: 50,
             borderRadius: 10,
             borderColor: "#FF4F6F",
             borderWidth: 1,
@@ -69,7 +78,7 @@ const MakeUpOne = ({ navigation }) => {
             alignItems: "center",
           }}
         >
-          <Ionicons name="heart-outline" size={30} color={"#FF4F6F"} />
+          <Ionicons name="heart-outline" size={25} color={"#FF4F6F"} />
         </View>
 
         <View style={styles.button_beli}>
@@ -98,7 +107,7 @@ const styles = StyleSheet.create({
     position: "absolute",
     bottom: 0,
     width: "100%",
-    height: 120,
+    height: 100,
     borderTopWidth: 1,
     borderTopColor: "#E5E5E5",
     paddingHorizontal: 20,
@@ -108,7 +117,7 @@ const styles = StyleSheet.create({
   },
   button_beli: {
     width: "70%",
-    height: 60,
+    height: 50,
     backgroundColor: "#FF4F6F",
     borderRadius: 10,
     justifyContent: "center",

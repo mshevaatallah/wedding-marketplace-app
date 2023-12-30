@@ -64,7 +64,7 @@ const Home = ({ navigation }) => {
             </Text>
           </View>
           <View>
-            <Feather name="shopping-bag" size={28} color="#24282c" />
+            <Ionicons name="heart-outline" size={35} color="#24282c" />
           </View>
         </View>
         <View style={{ marginTop: 40 }}>
@@ -83,7 +83,6 @@ const Home = ({ navigation }) => {
             >
               Kategori
             </Text>
-            <Ionicons name="ellipsis-horizontal-outline" size={25} />
           </View>
 
           <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
