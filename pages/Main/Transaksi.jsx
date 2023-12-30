@@ -210,7 +210,7 @@ const Transaksi = () => {
               style={{
                 height: 30,
                 width: 100,
-                backgroundColor: "#15B227",
+                backgroundColor: "#FF4F6F",
                 borderTopRightRadius: 12,
                 borderBottomRightRadius: 12,
                 justifyContent: "center",
@@ -225,7 +225,7 @@ const Transaksi = () => {
                   letterSpacing: 1,
                 }}
               >
-                BERHASIL
+                DIBATALKAN
               </Text>
             </View>
             <View
