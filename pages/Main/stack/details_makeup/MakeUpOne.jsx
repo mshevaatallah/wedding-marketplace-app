@@ -25,6 +25,7 @@ const MakeUpOne = ({ navigation }) => {
   return (
     <SafeAreaView onLayout={onLayoutRootView} style={styles.main_container}>
       <StatusBar style="dark" />
+
       <View>
         <View
           style={{
@@ -33,6 +34,7 @@ const MakeUpOne = ({ navigation }) => {
             justifyContent: "space-between",
             marginTop: 10,
             marginHorizontal: 20,
+            paddingBottom: 20,
           }}
         >
           <Ionicons
@@ -62,80 +64,119 @@ const MakeUpOne = ({ navigation }) => {
         <ScrollView>
           <View
             style={{
-              width: "100%",
-              height: 300,
-              marginTop: 20,
-              backgroundColor: "#E5E5E5",
+              paddingBottom: 200,
             }}
-          ></View>
-          <View style={{ marginHorizontal: 20, marginTop: 25 }}>
-            <View>
-              <Text
-                style={{
-                  fontFamily: "JakartaExtraB",
-                  fontSize: 10,
-                  color: "#FF4F6F",
-                  letterSpacing: 1,
+          >
+            <View
+              style={{
+                width: "100%",
+                height: 300,
+                marginTop: 20,
 
-                  textDecorationLine: "line-through",
-                }}
-              >
-                Rp.599.000
-              </Text>
-              <Text
-                style={{
-                  fontFamily: "JakartaBold",
-                  fontSize: 20,
-                  color: "#24282c",
-                  letterSpacing: 1,
-                  lineHeight: 25,
-                }}
-              >
-                Rp.400.000
-              </Text>
-              <Text
-                style={{
-                  fontFamily: "JakartaExtraB",
-                  fontSize: 21,
-                  color: "#24282c",
-                  letterSpacing: 0.4,
-                  lineHeight: 30,
-                  marginTop: 15,
-                }}
-              >
-                Paket Lengkap Make Up Artist By Beauty Salon
-              </Text>
-              <Text
-                style={{
-                  fontFamily: "JakartaMedium",
-                  fontSize: 12,
-                  color: "#808080",
-                  letterSpacing: 0.2,
-                  lineHeight: 15,
-                  marginTop: 10,
-                }}
-              >
-                Merupakan paket make up yang murah dan paling terbaik untuk anda{" "}
-              </Text>
-              <View
-                style={{
-                  borderBottomColor: "grey",
-                  borderBottomWidth: StyleSheet.hairlineWidth,
-                  marginTop: 20,
-                }}
-              />
-              <Text
-                style={{
-                  fontFamily: "JakartaExtraB",
-                  fontSize: 15,
-                  color: "#24282c",
-                  letterSpacing: 1,
-                  lineHeight: 25,
-                  marginTop: 18,
-                }}
-              >
-                Deskripsi Produk
-              </Text>
+                backgroundColor: "#E5E5E5",
+              }}
+            ></View>
+            <View style={{ marginHorizontal: 20, marginTop: 25 }}>
+              <View>
+                <Text
+                  style={{
+                    fontFamily: "JakartaExtraB",
+                    fontSize: 10,
+                    color: "#FF4F6F",
+                    letterSpacing: 1,
+
+                    textDecorationLine: "line-through",
+                  }}
+                >
+                  Rp.599.000
+                </Text>
+                <Text
+                  style={{
+                    fontFamily: "JakartaBold",
+                    fontSize: 20,
+                    color: "#24282c",
+                    letterSpacing: 1,
+                    lineHeight: 25,
+                  }}
+                >
+                  Rp.400.000
+                </Text>
+                <Text
+                  style={{
+                    fontFamily: "JakartaExtraB",
+                    fontSize: 21,
+                    color: "#24282c",
+                    letterSpacing: 0.4,
+                    lineHeight: 30,
+                    marginTop: 15,
+                  }}
+                >
+                  Paket Lengkap Make Up Artist By Beauty Salon
+                </Text>
+                <Text
+                  style={{
+                    fontFamily: "JakartaMedium",
+                    fontSize: 12,
+                    color: "#808080",
+                    letterSpacing: 0.2,
+                    lineHeight: 15,
+                    marginTop: 10,
+                  }}
+                >
+                  Merupakan paket make up yang murah dan paling terbaik untuk
+                  anda{" "}
+                </Text>
+                <View
+                  style={{
+                    borderBottomColor: "grey",
+                    borderBottomWidth: StyleSheet.hairlineWidth,
+                    marginTop: 20,
+                  }}
+                />
+                <Text
+                  style={{
+                    fontFamily: "JakartaExtraB",
+                    fontSize: 15,
+                    color: "#24282c",
+                    letterSpacing: 1,
+                    lineHeight: 25,
+                    marginTop: 18,
+                  }}
+                >
+                  Deskripsi Produk
+                </Text>
+                <Text
+                  style={{
+                    fontFamily: "JakartaMedium",
+                    fontSize: 12,
+                    color: "#808080",
+                    letterSpacing: 0.2,
+                    lineHeight: 15,
+                    marginTop: 10,
+                  }}
+                >
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                  at efficitur urna. Quisque at sem justo. Sed in vulputate
+                  lacus. In eu neque dui. Fusce et tempus est. Duis pulvinar
+                  libero eu elementum interdum. Donec tristique eget sem in
+                  cursus. Fusce in magna efficitur massa rhoncus euismod.
+                  Integer tincidunt nisl neque, in tristique dolor pretium nec.
+                  Morbi metus urna, convallis a pretium in, vestibulum sed
+                  turpis. Mauris erat velit, mattis tincidunt orci rutrum,
+                  dignissim auctor ante. Pellentesque volutpat vel libero quis
+                  pellentesque. Suspendisse malesuada ut arcu nec pharetra.
+                  Donec egestas, orci at lobortis finibus, nulla risus rutrum
+                  odio, in efficitur tortor ligula quis mi. Suspendisse sed
+                  felis tellus. Praesent vulputate vitae tortor tincidunt
+                  egestas. Vivamus quis massa dignissim, elementum ex ac,
+                  malesuada sapien. Praesent ultrices quis turpis ac interdum.
+                  Vivamus consequat ligula purus, sit amet dapibus mauris
+                  fermentum ac. Phasellus eleifend eros nec ex laoreet, at
+                  convallis libero sodales. Morbi eget cursus velit. Nulla
+                  tempor tristique placerat. Pellentesque ultricies scelerisque
+                  ante eget convallis.
+                </Text>
+              </View>
             </View>
           </View>
         </ScrollView>
@@ -144,8 +185,8 @@ const MakeUpOne = ({ navigation }) => {
       <View style={styles.bottom_bar}>
         <View
           style={{
-            width: 50,
-            height: 50,
+            width: 60,
+            height: 60,
             borderRadius: 10,
             borderColor: "#FF4F6F",
             borderWidth: 1,
@@ -153,14 +194,14 @@ const MakeUpOne = ({ navigation }) => {
             alignItems: "center",
           }}
         >
-          <Ionicons name="heart-outline" size={25} color={"#FF4F6F"} />
+          <Ionicons name="heart-outline" size={30} color={"#FF4F6F"} />
         </View>
 
         <View style={styles.button_beli}>
           <Text
             style={{
               fontFamily: "JakartaExtraB",
-              fontSize: 16,
+              fontSize: 18,
               color: "#fff",
             }}
           >
@@ -182,17 +223,20 @@ const styles = StyleSheet.create({
     position: "absolute",
     bottom: 0,
     width: "100%",
-    height: 100,
-    borderTopWidth: 1,
-    borderTopColor: "#E5E5E5",
+    height: 120,
+
     paddingHorizontal: 20,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
+    borderTopRightRadius: 30,
+    borderTopLeftRadius: 30,
+
+    backgroundColor: "#fff",
   },
   button_beli: {
     width: "70%",
-    height: 50,
+    height: 60,
     backgroundColor: "#FF4F6F",
     borderRadius: 10,
     justifyContent: "center",
