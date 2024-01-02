@@ -64,7 +64,13 @@ const Home = ({ navigation }) => {
             </Text>
           </View>
           <View>
-            <Ionicons name="heart-outline" size={35} color="#24282c" />
+            <Ionicons
+              name="heart-outline"
+              size={35}
+              color="#24282c"
+              suppressHighlighting={true}
+              onPress={() => navigation.navigate("Likes")}
+            />
           </View>
         </View>
         <View style={{ marginTop: 40 }}>
