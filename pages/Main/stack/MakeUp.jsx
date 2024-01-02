@@ -59,7 +59,12 @@ const MakeUp = ({ navigation }) => {
         >
           Make Up Artist
         </Text>
-        <Ionicons name="heart-outline" size={35} suppressHighlighting={true} />
+        <Ionicons
+          name="heart-outline"
+          size={35}
+          suppressHighlighting={true}
+          onPress={() => navigation.navigate("Likes")}
+        />
       </View>
       <ScrollView style={{ marginTop: 20 }}>
         <View
