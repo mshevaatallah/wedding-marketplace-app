@@ -63,6 +63,76 @@ const MakeUpOne = ({ navigation }) => {
               backgroundColor: "#E5E5E5",
             }}
           ></View>
+          <View style={{ marginHorizontal: 20, marginTop: 25 }}>
+            <View>
+              <Text
+                style={{
+                  fontFamily: "JakartaExtraB",
+                  fontSize: 10,
+                  color: "#FF4F6F",
+                  letterSpacing: 1,
+
+                  textDecorationLine: "line-through",
+                }}
+              >
+                Rp.599.000
+              </Text>
+              <Text
+                style={{
+                  fontFamily: "JakartaBold",
+                  fontSize: 20,
+                  color: "#24282c",
+                  letterSpacing: 1,
+                  lineHeight: 25,
+                }}
+              >
+                Rp.400.000
+              </Text>
+              <Text
+                style={{
+                  fontFamily: "JakartaExtraB",
+                  fontSize: 21,
+                  color: "#24282c",
+                  letterSpacing: 0.4,
+                  lineHeight: 30,
+                  marginTop: 15,
+                }}
+              >
+                Paket Lengkap Make Up Artist By Beauty Salon
+              </Text>
+              <Text
+                style={{
+                  fontFamily: "JakartaMedium",
+                  fontSize: 12,
+                  color: "#808080",
+                  letterSpacing: 0.2,
+                  lineHeight: 15,
+                  marginTop: 10,
+                }}
+              >
+                Merupakan paket make up yang murah dan paling terbaik untuk anda{" "}
+              </Text>
+              <View
+                style={{
+                  borderBottomColor: "grey",
+                  borderBottomWidth: StyleSheet.hairlineWidth,
+                  marginTop: 20,
+                }}
+              />
+              <Text
+                style={{
+                  fontFamily: "JakartaExtraB",
+                  fontSize: 15,
+                  color: "#24282c",
+                  letterSpacing: 1,
+                  lineHeight: 25,
+                  marginTop: 18,
+                }}
+              >
+                Deskripsi Produk
+              </Text>
+            </View>
+          </View>
         </ScrollView>
       </View>
 
@@ -113,7 +183,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: "space-around",
+    justifyContent: "center",
   },
   button_beli: {
     width: "70%",
@@ -122,5 +192,6 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     justifyContent: "center",
     alignItems: "center",
+    marginLeft: 20,
   },
 });
