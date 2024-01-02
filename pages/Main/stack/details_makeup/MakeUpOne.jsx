@@ -52,7 +52,12 @@ const MakeUpOne = ({ navigation }) => {
           >
             Detail
           </Text>
-          <Ionicons name="heart-outline" size={35} />
+          <Ionicons
+            name="heart-outline"
+            size={35}
+            suppressHighlighting={true}
+            onPress={() => navigation.navigate("Likes")}
+          />
         </View>
         <ScrollView>
           <View
