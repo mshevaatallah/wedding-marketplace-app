@@ -150,15 +150,31 @@ const Likes = ({ navigation }) => {
       </View>
       <View style={styles.bottom_bar}>
         <View style={styles.button_beli}>
-          <Text
+          <View
             style={{
-              fontFamily: "JakartaExtraB",
-              fontSize: 16,
-              color: "#fff",
+              flexDirection: "row",
+              alignItems: "center",
+              justifyContent: "space-around",
             }}
           >
-            Bayar sekarang
-          </Text>
+            <Ionicons
+              name="card-outline"
+              size={25}
+              color={"white"}
+              suppressHighlighting={true}
+            />
+            <Text
+              style={{
+                fontFamily: "JakartaExtraB",
+                fontSize: 16,
+                color: "#fff",
+                marginLeft: 10,
+              }}
+            >
+              Bayar sekarang
+            </Text>
+          </View>
+
           <Text
             style={{
               fontFamily: "JakartaMedium",
