@@ -5,12 +5,13 @@ import {
   SafeAreaView,
   ScrollView,
   Pressable,
+  Image,
 } from "react-native";
 import React, { useCallback } from "react";
 import { StatusBar } from "expo-status-bar";
 import { useFonts } from "expo-font";
 import Ionicons from "@expo/vector-icons/Ionicons";
-import Feather from "@expo/vector-icons/Feather";
+import Banner from "../../assets/images/7743860.jpg";
 import * as SplashScreen from "expo-splash-screen";
 const Home = ({ navigation }) => {
   const [fontsLoaded] = useFonts({
@@ -118,7 +119,17 @@ const Home = ({ navigation }) => {
             >
               Promo menarik
             </Text>
-            <View style={styles.promo_box}></View>
+            <View style={styles.promo_box}>
+              <Image
+                source={Banner}
+                style={{
+                  flex: 1,
+                  width: "100%",
+                  height: "100%",
+                  borderRadius: 10,
+                }}
+              />
+            </View>
           </View>
           <View style={{ marginTop: 29, marginBottom: 30 }}>
             <Text
