@@ -106,7 +106,7 @@ const MakeUp = ({ navigation }) => {
             <Text
               style={{
                 fontFamily: "JakartaMedium",
-                fontSize: 10,
+                fontSize: 12,
 
                 letterSpacing: 0.5,
                 maxWidth: 150,
@@ -145,7 +145,7 @@ const MakeUp = ({ navigation }) => {
             <Text
               style={{
                 fontFamily: "JakartaMedium",
-                fontSize: 10,
+                fontSize: 12,
 
                 letterSpacing: 0.5,
                 maxWidth: 150,
@@ -184,7 +184,7 @@ const MakeUp = ({ navigation }) => {
             <Text
               style={{
                 fontFamily: "JakartaMedium",
-                fontSize: 10,
+                fontSize: 12,
 
                 letterSpacing: 0.5,
                 maxWidth: 150,
@@ -223,7 +223,7 @@ const MakeUp = ({ navigation }) => {
             <Text
               style={{
                 fontFamily: "JakartaMedium",
-                fontSize: 10,
+                fontSize: 12,
 
                 letterSpacing: 0.5,
                 maxWidth: 150,

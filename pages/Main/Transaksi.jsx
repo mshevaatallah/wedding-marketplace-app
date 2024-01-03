@@ -1,8 +1,7 @@
 import { StyleSheet, Text, View, SafeAreaView, ScrollView } from "react-native";
 import React, { useCallback } from "react";
-import { StatusBar } from "expo-status-bar";
+
 import { useFonts } from "expo-font";
-import Ionicons from "@expo/vector-icons/Ionicons";
 
 import * as SplashScreen from "expo-splash-screen";
 

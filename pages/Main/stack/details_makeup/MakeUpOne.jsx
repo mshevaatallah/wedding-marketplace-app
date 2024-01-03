@@ -71,7 +71,6 @@ const MakeUpOne = ({ navigation }) => {
               style={{
                 width: "100%",
                 height: 300,
-                marginTop: 20,
 
                 backgroundColor: "#E5E5E5",
               }}
