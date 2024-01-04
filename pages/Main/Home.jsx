@@ -51,7 +51,7 @@ const Home = ({ navigation }) => {
               style={{
                 fontFamily: "JakartaExtraB",
                 fontSize: 28,
-                marginBottom: 15,
+                marginBottom: 12,
                 color: "#24282c",
                 letterSpacing: 1,
               }}
