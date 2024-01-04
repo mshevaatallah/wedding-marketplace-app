@@ -6,12 +6,17 @@ import {
   ScrollView,
   Pressable,
   Image,
+  ImageBackground,
 } from "react-native";
 import React, { useCallback } from "react";
 import { StatusBar } from "expo-status-bar";
 import { useFonts } from "expo-font";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import Banner from "../../assets/images/7743860.jpg";
+import MakeupImage from "../../assets/images/bunch-cosmetics-beauty-vlogger.jpg";
+import BusanaImage from "../../assets/images/busana.jpeg";
+import MediaImage from "../../assets/images/media.jpeg";
+import VendorImage from "../../assets/images/vendor.jpeg";
 import * as SplashScreen from "expo-splash-screen";
 const Home = ({ navigation }) => {
   const [fontsLoaded] = useFonts({
@@ -100,13 +105,91 @@ const Home = ({ navigation }) => {
                 paddingVertical: 10,
               }}
             >
-              <Pressable
-                style={styles.category_box}
-                onPress={() => navigation.navigate("Makeup")}
-              ></Pressable>
-              <View style={styles.category_box}></View>
-              <View style={styles.category_box}></View>
-              <View style={styles.category_box}></View>
+              <View>
+                <ImageBackground
+                  source={MakeupImage}
+                  style={styles.category_box}
+                  imageStyle={{ borderRadius: 10 }}
+                >
+                  <Pressable onPress={() => navigation.navigate("Makeup")}>
+                    <View style={styles.Badge_style}>
+                      <Text
+                        style={{
+                          fontFamily: "JakartaBold",
+                          fontSize: 12,
+                          color: "white",
+                        }}
+                      >
+                        Make Up
+                      </Text>
+                    </View>
+                  </Pressable>
+                </ImageBackground>
+              </View>
+
+              <View>
+                <ImageBackground
+                  source={BusanaImage}
+                  style={styles.category_box}
+                  imageStyle={{ borderRadius: 10 }}
+                >
+                  <Pressable onPress={() => navigation.navigate("Makeup")}>
+                    <View style={styles.Badge_style}>
+                      <Text
+                        style={{
+                          fontFamily: "JakartaBold",
+                          fontSize: 12,
+                          color: "white",
+                        }}
+                      >
+                        Busana
+                      </Text>
+                    </View>
+                  </Pressable>
+                </ImageBackground>
+              </View>
+              <View>
+                <ImageBackground
+                  source={MediaImage}
+                  style={styles.category_box}
+                  imageStyle={{ borderRadius: 10 }}
+                >
+                  <Pressable onPress={() => navigation.navigate("Makeup")}>
+                    <View style={styles.Badge_style}>
+                      <Text
+                        style={{
+                          fontFamily: "JakartaBold",
+                          fontSize: 12,
+                          color: "white",
+                        }}
+                      >
+                        Media
+                      </Text>
+                    </View>
+                  </Pressable>
+                </ImageBackground>
+              </View>
+              <View>
+                <ImageBackground
+                  source={VendorImage}
+                  style={styles.category_box}
+                  imageStyle={{ borderRadius: 10 }}
+                >
+                  <Pressable onPress={() => navigation.navigate("Makeup")}>
+                    <View style={styles.Badge_style}>
+                      <Text
+                        style={{
+                          fontFamily: "JakartaBold",
+                          fontSize: 12,
+                          color: "white",
+                        }}
+                      >
+                        Vendor
+                      </Text>
+                    </View>
+                  </Pressable>
+                </ImageBackground>
+              </View>
             </View>
           </ScrollView>
           <View style={{ marginTop: 20 }}>
@@ -213,6 +296,12 @@ const styles = StyleSheet.create({
     marginHorizontal: 20,
     flex: 1,
   },
+
+  Image_style: {
+    width: "100%",
+    height: "100%",
+    borderRadius: 10,
+  },
   category_box: {
     width: 130,
     height: 100,
@@ -232,5 +321,17 @@ const styles = StyleSheet.create({
     backgroundColor: "red",
     borderRadius: 10,
     marginRight: 10,
+  },
+  Badge_style: {
+    top: 40,
+    left: 0,
+    backgroundColor: "#FF4F6F",
+    position: "absolute",
+    height: 30,
+    width: 80,
+    borderTopRightRadius: 10,
+    borderBottomRightRadius: 10,
+    justifyContent: "center",
+    alignItems: "center",
   },
 });
