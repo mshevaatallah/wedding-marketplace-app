@@ -5,7 +5,7 @@ import { useFonts } from "expo-font";
 
 import * as SplashScreen from "expo-splash-screen";
 
-const Transaksi = () => {
+const Transaksi = ({ navigation }) => {
   const [fontsLoaded] = useFonts({
     JakartaRegular: require("../../assets/fonts/JakartaRegular.ttf"),
     JakartaExtraB: require("../../assets/fonts/JakartaExtraB.ttf"),

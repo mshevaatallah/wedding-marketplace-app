@@ -20,6 +20,8 @@ import LoginEmail from "../Auth/LoginEmail";
 import MakeUp from "../Main/stack/MakeUp";
 import MakeUpOne from "../Main/stack/details_makeup/MakeUpOne";
 import Likes from "../Main/Likes";
+import Payment from "../Main/Payment";
+import AlamatInput from "../Main/AlamatInput";
 
 export const Context = React.createContext(null);
 const Stack = createNativeStackNavigator();
@@ -161,6 +163,16 @@ const AppNavigation = () => {
             <Stack.Screen
               name="Likes"
               component={Likes}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="Payment"
+              component={Payment}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="AlamatInput"
+              component={AlamatInput}
               options={{ headerShown: false }}
             />
           </Stack.Navigator>

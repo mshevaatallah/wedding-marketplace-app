@@ -1,6 +1,13 @@
-import { StyleSheet, Text, View, SafeAreaView, ScrollView } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  SafeAreaView,
+  ScrollView,
+  Pressable,
+} from "react-native";
 import React, { useCallback } from "react";
-import { StatusBar } from "expo-status-bar";
+
 import { useFonts } from "expo-font";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import * as SplashScreen from "expo-splash-screen";
@@ -33,7 +40,7 @@ const Likes = ({ navigation }) => {
         }}
       >
         <Ionicons
-          name="arrow-back-outline"
+          name="chevron-back-outline"
           size={40}
           suppressHighlighting={true}
           onPress={() => navigation.goBack()}
@@ -149,7 +156,10 @@ const Likes = ({ navigation }) => {
         </ScrollView>
       </View>
       <View style={styles.bottom_bar}>
-        <View style={styles.button_beli}>
+        <Pressable
+          style={styles.button_beli}
+          onPress={() => navigation.navigate("AlamatInput")}
+        >
           <View
             style={{
               flexDirection: "row",
@@ -184,7 +194,7 @@ const Likes = ({ navigation }) => {
           >
             Rp.1.000.000
           </Text>
-        </View>
+        </Pressable>
       </View>
     </SafeAreaView>
   );

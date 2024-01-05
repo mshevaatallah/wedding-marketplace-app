@@ -38,7 +38,7 @@ const MakeUpOne = ({ navigation }) => {
           }}
         >
           <Ionicons
-            name="arrow-back-outline"
+            name="chevron-back-outline"
             size={35}
             suppressHighlighting={true}
             onPress={() => navigation.goBack()}
