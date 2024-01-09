@@ -23,6 +23,7 @@ import Likes from "../Main/Likes";
 import Payment from "../Main/Payment";
 import AlamatInput from "../Main/AlamatInput";
 import SellerChat from "../Main/stack/details_makeup/SellerChat";
+import PusatBantuan from "../Main/PusatBantuan";
 
 export const Context = React.createContext(null);
 const Stack = createNativeStackNavigator();
@@ -179,6 +180,11 @@ const AppNavigation = () => {
             <Stack.Screen
               name="SellerChat"
               component={SellerChat}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="PusatBantuan"
+              component={PusatBantuan}
               options={{ headerShown: false }}
             />
           </Stack.Navigator>

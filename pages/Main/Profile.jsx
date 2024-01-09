@@ -12,7 +12,7 @@ import { useFonts } from "expo-font";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import * as SplashScreen from "expo-splash-screen";
 
-const Profile = () => {
+const Profile = ({ navigation }) => {
   const [fontsLoaded] = useFonts({
     JakartaRegular: require("../../assets/fonts/JakartaRegular.ttf"),
     JakartaExtraB: require("../../assets/fonts/JakartaExtraB.ttf"),
@@ -125,7 +125,8 @@ const Profile = () => {
           >
             Butuh bantuan ?
           </Text>
-          <View
+          <Pressable
+            onPress={() => navigation.navigate("PusatBantuan")}
             style={{
               backgroundColor: "white",
               paddingHorizontal: 28,
@@ -144,7 +145,7 @@ const Profile = () => {
             >
               Pusat bantuan
             </Text>
-          </View>
+          </Pressable>
         </View>
         <View
           style={{
