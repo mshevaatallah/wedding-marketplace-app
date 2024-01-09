@@ -62,8 +62,17 @@ const SellerChat = ({ navigation }) => {
               borderRadius: 20,
               backgroundColor: "#ebebeb",
               marginRight: 15,
+              justifyContent: "center",
+              alignItems: "center",
             }}
-          ></View>
+          >
+            <Ionicons
+              name="basket-outline"
+              size={20}
+              suppressHighlighting={true}
+              onPress={() => navigation.goBack()}
+            />
+          </View>
           <View>
             <Text
               style={{
