@@ -193,7 +193,13 @@ const MakeUpOne = ({ navigation }) => {
             alignItems: "center",
           }}
         >
-          <Ionicons name="heart-outline" size={30} color={"#FF4F6F"} />
+          <Ionicons
+            name="chatbubble-outline"
+            size={30}
+            color={"#FF4F6F"}
+            suppressHighlighting={true}
+            onPress={() => navigation.navigate("SellerChat")}
+          />
         </View>
 
         <View style={styles.button_beli}>

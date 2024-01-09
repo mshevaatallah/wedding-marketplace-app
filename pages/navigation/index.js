@@ -22,6 +22,7 @@ import MakeUpOne from "../Main/stack/details_makeup/MakeUpOne";
 import Likes from "../Main/Likes";
 import Payment from "../Main/Payment";
 import AlamatInput from "../Main/AlamatInput";
+import SellerChat from "../Main/stack/details_makeup/SellerChat";
 
 export const Context = React.createContext(null);
 const Stack = createNativeStackNavigator();
@@ -173,6 +174,11 @@ const AppNavigation = () => {
             <Stack.Screen
               name="AlamatInput"
               component={AlamatInput}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="SellerChat"
+              component={SellerChat}
               options={{ headerShown: false }}
             />
           </Stack.Navigator>

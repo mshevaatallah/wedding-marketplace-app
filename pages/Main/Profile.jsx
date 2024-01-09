@@ -94,7 +94,7 @@ const Profile = () => {
           </Text>
           <View
             style={{
-              backgroundColor: "#026BC1",
+              backgroundColor: "white",
               paddingHorizontal: 40,
               paddingVertical: 12,
               borderRadius: 30,
@@ -104,11 +104,45 @@ const Profile = () => {
               style={{
                 fontFamily: "JakartaExtraB",
                 fontSize: 13,
-                color: "white",
+                color: "#FF4F6F",
+
                 letterSpacing: 0.5,
               }}
             >
               Ubah profil
+            </Text>
+          </View>
+        </View>
+        <View style={styles.pusat_bantuan}>
+          <Text
+            style={{
+              fontFamily: "JakartaExtraB",
+              fontSize: 13,
+              maxWidth: 100,
+              color: "#FFFFFF",
+              letterSpacing: 0.5,
+            }}
+          >
+            Butuh bantuan ?
+          </Text>
+          <View
+            style={{
+              backgroundColor: "white",
+              paddingHorizontal: 28,
+              paddingVertical: 12,
+              borderRadius: 30,
+            }}
+          >
+            <Text
+              style={{
+                fontFamily: "JakartaExtraB",
+                fontSize: 13,
+                color: "#FF4F6F",
+
+                letterSpacing: 0.5,
+              }}
+            >
+              Pusat bantuan
             </Text>
           </View>
         </View>
@@ -238,6 +272,17 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-around",
+    marginBottom: 20,
+  },
+  pusat_bantuan: {
+    width: "100%",
+    height: 90,
+    backgroundColor: "#FB002E",
+    borderRadius: 20,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-around",
+    marginBottom: 20,
   },
   photo_profil: {
     width: 70,
