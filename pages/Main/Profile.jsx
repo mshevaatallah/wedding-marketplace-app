@@ -96,7 +96,8 @@ const Profile = ({ navigation }) => {
           >
             Ubah profilmu disini
           </Text>
-          <View
+          <Pressable
+            onPress={() => navigation.navigate("EditProfile")}
             style={{
               backgroundColor: "white",
               paddingHorizontal: 40,
@@ -115,7 +116,7 @@ const Profile = ({ navigation }) => {
             >
               Ubah profil
             </Text>
-          </View>
+          </Pressable>
         </View>
         <View style={styles.pusat_bantuan}>
           <Text

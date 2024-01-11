@@ -24,6 +24,7 @@ import Payment from "../Main/Payment";
 import AlamatInput from "../Main/AlamatInput";
 import SellerChat from "../Main/stack/details_makeup/SellerChat";
 import PusatBantuan from "../Main/PusatBantuan";
+import EditProfile from "../Main/EditProfile";
 
 export const Context = React.createContext(null);
 const Stack = createNativeStackNavigator();
@@ -208,6 +209,11 @@ const AppNavigation = () => {
             <Stack.Screen
               name="PusatBantuan"
               component={PusatBantuan}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="EditProfile"
+              component={EditProfile}
               options={{ headerShown: false }}
             />
           </Stack.Navigator>

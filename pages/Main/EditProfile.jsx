@@ -15,23 +15,29 @@ import * as SplashScreen from "expo-splash-screen";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { Context } from "../navigation";
 
-const RegisterAccount = ({ navigation }) => {
-  const {
-    setEmail,
-    setPassword,
-    setName,
-    setNameB,
-    name,
-    nameB,
-    email,
-    password,
-  } = useContext(Context);
+const EditProfile = ({ navigation }) => {
   const [fontsLoaded] = useFonts({
     JakartaRegular: require("../../assets/fonts/JakartaRegular.ttf"),
     JakartaExtraB: require("../../assets/fonts/JakartaExtraB.ttf"),
     JakartaMedium: require("../../assets/fonts/JakartaMedium.ttf"),
   });
+  const {
+    setEmail,
+    setPassword,
+    setName,
+    setNameB,
+    setPhone_number,
+    name,
+    nameB,
+    email,
+    password,
+  } = useContext(Context);
   const [ConfirmPassword, setConfirmPassword] = useState("");
+  const [NamaDepan, setNamaDepan] = useState("");
+  const [NamaBelakang, setNamaBelakang] = useState("");
+  const [EmailChange, setEmailChange] = useState("");
+  const [PhoneChange, setPhoneChange] = useState("");
+
   const [color, setColors] = useState(false);
   const [color2, setColors2] = useState(false);
   const [color3, setColors3] = useState(false);
@@ -45,33 +51,31 @@ const RegisterAccount = ({ navigation }) => {
     return null;
   }
   const handlePress = () => {
-    if (name === "") {
+    if (NamaDepan === "") {
       alert("Nama Depan tidak boleh kosong");
       return;
-    } else if (nameB === "") {
+    } else if (NamaBelakang === "") {
       alert("Nama Belakang tidak boleh kosong");
       return;
-    } else if (email === "") {
+    } else if (EmailChange === "") {
       alert("Email tidak boleh kosong");
       return;
-    } else if (password === "") {
-      alert("Password tidak boleh kosong");
-      return;
-    } else if (ConfirmPassword === "") {
-      alert("Konfirmasi Password tidak boleh kosong");
-      return;
-    } else if (password !== ConfirmPassword) {
-      alert("Password tidak sama");
+    } else if (PhoneChange === "") {
+      alert("Nomor Handphone tidak boleh kosong");
       return;
     } else {
-      navigation.navigate("RegisterOTP");
+      setEmail(EmailChange);
+      setName(NamaDepan);
+      setNameB(NamaBelakang);
+      setPhone_number(PhoneChange);
+      navigation.navigate("Tabs");
     }
   };
   return (
     <SafeAreaView onLayout={onLayoutRootView} style={styles.main_container}>
       <StatusBar style="dark" />
       <Ionicons
-        name="arrow-back-outline"
+        name="chevron-back-outline"
         size={35}
         suppressHighlighting={true}
         onPress={() => navigation.goBack()}
@@ -86,7 +90,7 @@ const RegisterAccount = ({ navigation }) => {
                 marginTop: 15,
               }}
             >
-              Buatlah akun mu !
+              Ubah Profil
             </Text>
             <Text
               style={{
@@ -96,20 +100,7 @@ const RegisterAccount = ({ navigation }) => {
                 color: "#AEAFB1",
               }}
             >
-              Sudah punya akun ?{" "}
-              <Text
-                style={{
-                  color: "#FF4F6F",
-                  fontFamily: "JakartaExtraB",
-                  marginLeft: 1,
-                  textDecorationLine: "underline",
-                }}
-                suppressHighlighting={true}
-                onPress={() => navigation.navigate("Login")}
-              >
-                {" "}
-                Masuk disini
-              </Text>
+              Isilah dengan profil yang benar
             </Text>
           </View>
           <View
@@ -145,9 +136,7 @@ const RegisterAccount = ({ navigation }) => {
                   //change border color
                   setColors(false);
                 }}
-                onChangeText={(text) => {
-                  setName(text);
-                }}
+                onChangeText={(text) => setNamaDepan(text)}
                 style={{
                   borderColor: color ? "#FF4F6F" : "#DADEE3",
                   borderWidth: 2,
@@ -186,9 +175,7 @@ const RegisterAccount = ({ navigation }) => {
                   //change border color
                   setColors2(false);
                 }}
-                onChangeText={(text) => {
-                  setNameB(text);
-                }}
+                onChangeText={(text) => setNamaBelakang(text)}
                 style={{
                   borderColor: color2 ? "#FF4F6F" : "#DADEE3",
                   borderWidth: 2,
@@ -215,10 +202,7 @@ const RegisterAccount = ({ navigation }) => {
               Email
             </Text>
             <TextInput
-              placeholder="johndoe@gmail.com"
-              onChangeText={(text) => {
-                setEmail(text);
-              }}
+              placeholder="yourmail@mail.com"
               onFocus={() => {
                 //change border color
                 setColors3(true);
@@ -227,6 +211,7 @@ const RegisterAccount = ({ navigation }) => {
                 //change border color
                 setColors3(false);
               }}
+              onChangeText={(text) => setEmailChange(text)}
               style={{
                 borderColor: color3 ? "#FF4F6F" : "#DADEE3",
                 borderWidth: 2,
@@ -249,13 +234,11 @@ const RegisterAccount = ({ navigation }) => {
                 color: "#AEAFB1",
               }}
             >
-              Password
+              Nomor Handphone
             </Text>
             <TextInput
-              onChangeText={(text) => {
-                setPassword(text);
-              }}
-              secureTextEntry={true}
+              keyboardType="numeric"
+              placeholder="08xxxxx"
               onFocus={() => {
                 //change border color
                 setColors3(true);
@@ -264,43 +247,7 @@ const RegisterAccount = ({ navigation }) => {
                 //change border color
                 setColors3(false);
               }}
-              style={{
-                borderColor: color3 ? "#FF4F6F" : "#DADEE3",
-                borderWidth: 2,
-                paddingLeft: 10,
-                borderRadius: 10,
-                height: 65,
-                fontFamily: "JakartaExtraB",
-                fontSize: 12,
-                marginTop: 15,
-                width: "100%",
-              }}
-            />
-          </View>
-          <View style={{ marginTop: 10 }}>
-            <Text
-              style={{
-                fontFamily: "JakartaExtraB",
-                fontSize: 10,
-                marginTop: 15,
-                color: "#AEAFB1",
-              }}
-            >
-              Konfirmasi Password
-            </Text>
-            <TextInput
-              secureTextEntry={true}
-              onFocus={() => {
-                //change border color
-                setColors3(true);
-              }}
-              onBlur={() => {
-                //change border color
-                setColors3(false);
-              }}
-              onChangeText={(text) => {
-                setConfirmPassword(text);
-              }}
+              onChangeText={(text) => setPhoneChange(text)}
               style={{
                 borderColor: color3 ? "#FF4F6F" : "#DADEE3",
                 borderWidth: 2,
@@ -327,7 +274,7 @@ const RegisterAccount = ({ navigation }) => {
   );
 };
 
-export default RegisterAccount;
+export default EditProfile;
 
 const styles = StyleSheet.create({
   main_container: {
