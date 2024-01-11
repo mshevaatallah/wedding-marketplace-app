@@ -142,8 +142,28 @@ const AppNavigation = () => {
     setIsLoggedIn(!isLoggedIn);
   };
 
+  const [name, setName] = useState("");
+  const [nameB, setNameB] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone_number, setPhone_number] = useState("");
+  const [password, setPassword] = useState("");
+
   return (
-    <Context.Provider value={{ isLoggedIn, toggleLogged }}>
+    <Context.Provider
+      value={{
+        isLoggedIn,
+        toggleLogged,
+        setName,
+        setEmail,
+        setPassword,
+        setPhone_number,
+        setNameB,
+        name,
+        email,
+        password,
+        nameB,
+      }}
+    >
       <NavigationContainer>
         {isLoggedIn ? (
           <Stack.Navigator>

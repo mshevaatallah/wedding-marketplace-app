@@ -9,12 +9,14 @@ import {
   ScrollView,
 } from "react-native";
 import { StatusBar } from "expo-status-bar";
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useContext, useState } from "react";
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 import Ionicons from "@expo/vector-icons/Ionicons";
+import { Context } from "../navigation";
 
 const RegisterAccount = ({ navigation }) => {
+  const { setEmail, setPassword, setName, setNameB } = useContext(Context);
   const [fontsLoaded] = useFonts({
     JakartaRegular: require("../../assets/fonts/JakartaRegular.ttf"),
     JakartaExtraB: require("../../assets/fonts/JakartaExtraB.ttf"),
@@ -113,6 +115,9 @@ const RegisterAccount = ({ navigation }) => {
                   //change border color
                   setColors(false);
                 }}
+                onChangeText={(text) => {
+                  setName(text);
+                }}
                 style={{
                   borderColor: color ? "#FF4F6F" : "#DADEE3",
                   borderWidth: 2,
@@ -151,6 +156,9 @@ const RegisterAccount = ({ navigation }) => {
                   //change border color
                   setColors2(false);
                 }}
+                onChangeText={(text) => {
+                  setNameB(text);
+                }}
                 style={{
                   borderColor: color2 ? "#FF4F6F" : "#DADEE3",
                   borderWidth: 2,
@@ -178,6 +186,9 @@ const RegisterAccount = ({ navigation }) => {
             </Text>
             <TextInput
               placeholder="johndoe@gmail.com"
+              onChangeText={(text) => {
+                setEmail(text);
+              }}
               onFocus={() => {
                 //change border color
                 setColors3(true);
@@ -211,6 +222,9 @@ const RegisterAccount = ({ navigation }) => {
               Password
             </Text>
             <TextInput
+              onChangeText={(text) => {
+                setPassword(text);
+              }}
               secureTextEntry={true}
               onFocus={() => {
                 //change border color

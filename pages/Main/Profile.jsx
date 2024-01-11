@@ -6,13 +6,15 @@ import {
   ScrollView,
   Pressable,
 } from "react-native";
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useContext, useState } from "react";
 
 import { useFonts } from "expo-font";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import * as SplashScreen from "expo-splash-screen";
+import { Context } from "../navigation";
 
 const Profile = ({ navigation }) => {
+  const { name, nameB, email } = useContext(Context);
   const [fontsLoaded] = useFonts({
     JakartaRegular: require("../../assets/fonts/JakartaRegular.ttf"),
     JakartaExtraB: require("../../assets/fonts/JakartaExtraB.ttf"),
@@ -66,7 +68,7 @@ const Profile = ({ navigation }) => {
                 marginBottom: 5,
               }}
             >
-              Sheva Atallah
+              {name + " " + nameB}
             </Text>
             <Text
               style={{
@@ -188,7 +190,7 @@ const Profile = ({ navigation }) => {
                 letterSpacing: 1,
               }}
             >
-              Sheva
+              {name + " " + nameB}
             </Text>
           </View>
           <View
@@ -216,7 +218,7 @@ const Profile = ({ navigation }) => {
                 letterSpacing: 1,
               }}
             >
-              msheva@gmail.com
+              {email}
             </Text>
           </View>
           <View
