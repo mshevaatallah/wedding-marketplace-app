@@ -145,7 +145,7 @@ const AppNavigation = () => {
   const [name, setName] = useState("");
   const [nameB, setNameB] = useState("");
   const [email, setEmail] = useState("");
-  const [phone_number, setPhone_number] = useState("");
+  const [phone_number, setPhone_number] = useState(null);
   const [password, setPassword] = useState("");
 
   return (
@@ -153,6 +153,7 @@ const AppNavigation = () => {
       value={{
         isLoggedIn,
         toggleLogged,
+        setIsLoggedIn,
         setName,
         setEmail,
         setPassword,
@@ -162,6 +163,8 @@ const AppNavigation = () => {
         email,
         password,
         nameB,
+        phone_number,
+        setPhone_number,
       }}
     >
       <NavigationContainer>

@@ -9,14 +9,16 @@ import {
   ScrollView,
 } from "react-native";
 import { StatusBar } from "expo-status-bar";
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useContext, useState } from "react";
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { SelectList } from "react-native-dropdown-select-list";
+import { Context } from "../navigation";
 
 SplashScreen.preventAutoHideAsync();
 const RegisterOTP = ({ navigation }) => {
+  const { setPhone_number, phone_number } = useContext(Context);
   const [selected, setSelected] = useState("+62");
   const [value, setValue] = useState("");
   const data = [
@@ -44,11 +46,11 @@ const RegisterOTP = ({ navigation }) => {
   }
 
   const handlePress = () => {
-    if (value.length < 11) {
+    if (phone_number.length < 11) {
       alert("Nomor telepon harus lebih dari 11 digit");
     } else {
       navigation.navigate("InputOTP", {
-        value: value,
+        value: phone_number,
         selected: selected,
       });
     }
@@ -124,7 +126,7 @@ const RegisterOTP = ({ navigation }) => {
               keyboardType="numeric"
               maxLength={12}
               style={styles.number_code}
-              onChange={(e) => setValue(e.nativeEvent.text)}
+              onChange={(e) => setPhone_number(e.nativeEvent.text)}
             ></TextInput>
           </View>
         </ScrollView>

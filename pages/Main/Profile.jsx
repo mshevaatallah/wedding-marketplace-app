@@ -9,12 +9,14 @@ import {
 import React, { useCallback, useContext, useState } from "react";
 
 import { useFonts } from "expo-font";
-import Ionicons from "@expo/vector-icons/Ionicons";
+
 import * as SplashScreen from "expo-splash-screen";
 import { Context } from "../navigation";
 
 const Profile = ({ navigation }) => {
-  const { name, nameB, email } = useContext(Context);
+  const { name, nameB, email, phone_number, setIsLoggedIn } =
+    useContext(Context);
+
   const [fontsLoaded] = useFonts({
     JakartaRegular: require("../../assets/fonts/JakartaRegular.ttf"),
     JakartaExtraB: require("../../assets/fonts/JakartaExtraB.ttf"),
@@ -246,10 +248,36 @@ const Profile = ({ navigation }) => {
                 letterSpacing: 1,
               }}
             >
-              019212912182
+              {phone_number}
             </Text>
           </View>
         </View>
+        <Pressable
+          onPress={() => {
+            setIsLoggedIn(false);
+          }}
+          style={{
+            width: "100%",
+            height: 50,
+            borderColor: "#FF4F6F",
+            borderWidth: 2,
+            justifyContent: "center",
+            alignItems: "center",
+            borderRadius: 10,
+            marginTop: 40,
+          }}
+        >
+          <Text
+            style={{
+              fontFamily: "JakartaExtraB",
+              fontSize: 14,
+              color: "#FF4F6F",
+              letterSpacing: 1,
+            }}
+          >
+            Keluar
+          </Text>
+        </Pressable>
       </ScrollView>
     </SafeAreaView>
   );

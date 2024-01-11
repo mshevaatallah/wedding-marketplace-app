@@ -25,6 +25,9 @@ const LoginEmail = ({ navigation }) => {
   const [color, setColors] = useState(false);
   const { toggleLogged } = useContext(Context);
   const [color3, setColors3] = useState(false);
+  const { email, password } = useContext(Context);
+  const [emailValue, setEmail] = useState("");
+  const [passwordValue, setPassword] = useState("");
   const onLayoutRootView = useCallback(async () => {
     if (fontsLoaded) {
       await SplashScreen.hideAsync();
@@ -35,7 +38,17 @@ const LoginEmail = ({ navigation }) => {
     return null;
   }
   const handlePress = () => {
-    toggleLogged();
+    if (emailValue.length < 1) {
+      alert("Email tidak boleh kosong");
+    } else if (passwordValue.length < 1) {
+      alert("Password tidak boleh kosong");
+    } else if (emailValue != email) {
+      alert("Email tidak terdaftar");
+    } else if (passwordValue != password) {
+      alert("Password salah");
+    } else {
+      toggleLogged();
+    }
   };
   return (
     <SafeAreaView onLayout={onLayoutRootView} style={styles.main_container}>
@@ -91,6 +104,7 @@ const LoginEmail = ({ navigation }) => {
                 //change border color
                 setColors3(false);
               }}
+              onChangeText={(text) => setEmail(text)}
               style={{
                 borderColor: color3 ? "#FF4F6F" : "#DADEE3",
                 borderWidth: 2,
@@ -126,6 +140,7 @@ const LoginEmail = ({ navigation }) => {
                 //change border color
                 setColors(false);
               }}
+              onChangeText={(text) => setPassword(text)}
               style={{
                 borderColor: color ? "#FF4F6F" : "#DADEE3",
                 borderWidth: 2,

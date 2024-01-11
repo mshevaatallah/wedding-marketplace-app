@@ -9,11 +9,12 @@ import {
   ScrollView,
 } from "react-native";
 import { StatusBar } from "expo-status-bar";
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useContext, useState } from "react";
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { SelectList } from "react-native-dropdown-select-list";
+import { Context } from "../navigation";
 
 SplashScreen.preventAutoHideAsync();
 const Login = ({ navigation }) => {
@@ -42,10 +43,13 @@ const Login = ({ navigation }) => {
   if (!fontsLoaded) {
     return null;
   }
+  const { phone_number } = useContext(Context);
   const handlePress = () => {
     if (value.length < 11) {
       alert("Nomor telepon harus lebih dari 11 digit");
-    } else {
+    } else if (value != phone_number) {
+      alert("Nomor telepon tidak terdaftar");
+    } else if (value == phone_number) {
       navigation.navigate("InputOTP", {
         value: value,
         selected: selected,
