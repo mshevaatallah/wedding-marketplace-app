@@ -17,6 +17,10 @@ import MakeupImage from "../../assets/images/bunch-cosmetics-beauty-vlogger.jpg"
 import BusanaImage from "../../assets/images/busana.jpeg";
 import MediaImage from "../../assets/images/media.jpeg";
 import VendorImage from "../../assets/images/vendor.jpeg";
+import cocok1 from "../../assets/images/cocok1.jpeg";
+import cocok2 from "../../assets/images/cocok2.jpeg";
+import cocok3 from "../../assets/images/cocok3.jpeg";
+import cocok4 from "../../assets/images/cocok4.jpeg";
 import * as SplashScreen from "expo-splash-screen";
 const Home = ({ navigation }) => {
   const [fontsLoaded] = useFonts({
@@ -233,6 +237,7 @@ const Home = ({ navigation }) => {
                   style={{
                     marginTop: 0,
                     flexDirection: "row",
+                    marginBottom: 20,
                   }}
                 >
                   <View style={styles.cocok_box}>
@@ -244,7 +249,45 @@ const Home = ({ navigation }) => {
                         borderTopLeftRadius: 10,
                         borderTopRightRadius: 10,
                       }}
-                    ></View>
+                    >
+                      <Image
+                        source={cocok1}
+                        style={{
+                          width: "100%",
+                          height: "100%",
+                          borderTopLeftRadius: 10,
+                          borderTopRightRadius: 10,
+                        }}
+                      />
+                      <View
+                        style={{
+                          marginLeft: 13,
+                          marginRight: 5,
+                          marginTop: 10,
+                        }}
+                      >
+                        <Text
+                          style={{
+                            fontFamily: "JakartaBold",
+                            fontSize: 15,
+                            color: "#595A5D",
+                            maxWidth: 150,
+                          }}
+                        >
+                          Paket alis dan bulu mata
+                        </Text>
+                        <Text
+                          style={{
+                            fontFamily: "JakartaMedium",
+                            fontSize: 12,
+                            color: "#595A5D",
+                            marginTop: 15,
+                          }}
+                        >
+                          By Ameera Beauty
+                        </Text>
+                      </View>
+                    </View>
                   </View>
                   <View style={styles.cocok_box}>
                     <View
@@ -255,7 +298,45 @@ const Home = ({ navigation }) => {
                         borderTopLeftRadius: 10,
                         borderTopRightRadius: 10,
                       }}
-                    ></View>
+                    >
+                      <Image
+                        source={cocok2}
+                        style={{
+                          width: "100%",
+                          height: "100%",
+                          borderTopLeftRadius: 10,
+                          borderTopRightRadius: 10,
+                        }}
+                      />
+                      <View
+                        style={{
+                          marginLeft: 13,
+                          marginRight: 5,
+                          marginTop: 10,
+                        }}
+                      >
+                        <Text
+                          style={{
+                            fontFamily: "JakartaBold",
+                            fontSize: 15,
+                            color: "#595A5D",
+                            maxWidth: 150,
+                          }}
+                        >
+                          Paket Make Up hemat
+                        </Text>
+                        <Text
+                          style={{
+                            fontFamily: "JakartaMedium",
+                            fontSize: 12,
+                            color: "#595A5D",
+                            marginTop: 15,
+                          }}
+                        >
+                          By Ameera Beauty
+                        </Text>
+                      </View>
+                    </View>
                   </View>
                   <View style={styles.cocok_box}>
                     <View
@@ -266,7 +347,44 @@ const Home = ({ navigation }) => {
                         borderTopLeftRadius: 10,
                         borderTopRightRadius: 10,
                       }}
-                    ></View>
+                    >
+                      <Image
+                        source={cocok4}
+                        style={{
+                          width: "100%",
+                          height: "100%",
+                          borderTopLeftRadius: 10,
+                          borderTopRightRadius: 10,
+                        }}
+                      />
+                    </View>
+                    <View
+                      style={{
+                        marginLeft: 13,
+                        marginTop: 10,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          fontFamily: "JakartaBold",
+                          fontSize: 15,
+                          color: "#595A5D",
+                          maxWidth: 150,
+                        }}
+                      >
+                        Paket Make Up lengkap
+                      </Text>
+                      <Text
+                        style={{
+                          fontFamily: "JakartaMedium",
+                          fontSize: 12,
+                          color: "#595A5D",
+                          marginTop: 15,
+                        }}
+                      >
+                        By Ameera Beauty
+                      </Text>
+                    </View>
                   </View>
                   <View style={styles.cocok_box}>
                     <View
@@ -277,7 +395,45 @@ const Home = ({ navigation }) => {
                         borderTopLeftRadius: 10,
                         borderTopRightRadius: 10,
                       }}
-                    ></View>
+                    >
+                      <Image
+                        source={cocok3}
+                        style={{
+                          width: "100%",
+                          height: "100%",
+                          borderTopLeftRadius: 10,
+                          borderTopRightRadius: 10,
+                        }}
+                      />
+                      <View
+                        style={{
+                          marginLeft: 13,
+                          marginRight: 5,
+                          marginTop: 10,
+                        }}
+                      >
+                        <Text
+                          style={{
+                            fontFamily: "JakartaBold",
+                            fontSize: 15,
+                            color: "#595A5D",
+                            maxWidth: 150,
+                          }}
+                        >
+                          Miss Swiss Make Up
+                        </Text>
+                        <Text
+                          style={{
+                            fontFamily: "JakartaMedium",
+                            fontSize: 12,
+                            color: "#595A5D",
+                            marginTop: 15,
+                          }}
+                        >
+                          By Ameera Beauty
+                        </Text>
+                      </View>
+                    </View>
                   </View>
                 </View>
               </ScrollView>
@@ -318,7 +474,11 @@ const styles = StyleSheet.create({
   cocok_box: {
     width: 150,
     height: 200,
-    backgroundColor: "red",
+    backgroundColor: "white",
+    shadowColor: "#171717",
+    shadowOffset: { width: -1, height: 4 },
+    shadowOpacity: 0.1,
+    shadowRadius: 3,
     borderRadius: 10,
     marginRight: 10,
   },
