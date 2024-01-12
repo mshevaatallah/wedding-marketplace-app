@@ -1,18 +1,32 @@
 import { StyleSheet, Text, View, SafeAreaView, ScrollView } from "react-native";
-import React, { useCallback } from "react";
+import React, { useCallback, useContext, useState } from "react";
 import { StatusBar } from "expo-status-bar";
 import { useFonts } from "expo-font";
 import Ionicons from "@expo/vector-icons/Ionicons";
 
 import * as SplashScreen from "expo-splash-screen";
+import { Context } from "../../../navigation";
 
 const MakeUpOne = ({ navigation }) => {
+  const { likes, setLikes } = useContext(Context);
+  function addTask() {
+    const newLikes = {
+      id: Date.now(),
+      date: new Date().toDateString(),
+      toko: "Ameera Beauty",
+      judul: "1 set paket make up",
+      price: "Rp.400.000",
+      completed: false,
+    };
+    setLikes([...likes, newLikes]);
+  }
   const [fontsLoaded] = useFonts({
     JakartaRegular: require("../../../../assets/fonts/JakartaRegular.ttf"),
     JakartaExtraB: require("../../../../assets/fonts/JakartaExtraB.ttf"),
     JakartaMedium: require("../../../../assets/fonts/JakartaMedium.ttf"),
     JakartaBold: require("../../../../assets/fonts/Jakarta_Bold.ttf"),
   });
+  const [color, setColor] = useState(false);
   const onLayoutRootView = useCallback(async () => {
     if (fontsLoaded) {
       await SplashScreen.hideAsync();
@@ -21,6 +35,13 @@ const MakeUpOne = ({ navigation }) => {
 
   if (!fontsLoaded) {
     return null;
+  }
+  function HandlePress() {
+    setColor(true);
+    if (color != true) {
+      addTask();
+      return;
+    }
   }
   return (
     <SafeAreaView onLayout={onLayoutRootView} style={styles.main_container}>
@@ -55,10 +76,10 @@ const MakeUpOne = ({ navigation }) => {
             Detail
           </Text>
           <Ionicons
-            name="heart-outline"
+            name={color ? "heart" : "heart-outline"}
             size={35}
             suppressHighlighting={true}
-            onPress={() => navigation.navigate("Likes")}
+            onPress={HandlePress}
           />
         </View>
         <ScrollView>

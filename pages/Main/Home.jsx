@@ -105,13 +105,13 @@ const Home = ({ navigation }) => {
                 paddingVertical: 10,
               }}
             >
-              <View>
+              <Pressable onPress={() => navigation.navigate("Makeup")}>
                 <ImageBackground
                   source={MakeupImage}
                   style={styles.category_box}
                   imageStyle={{ borderRadius: 10 }}
                 >
-                  <Pressable onPress={() => navigation.navigate("Makeup")}>
+                  <View>
                     <View style={styles.Badge_style}>
                       <Text
                         style={{
@@ -123,9 +123,9 @@ const Home = ({ navigation }) => {
                         Make Up
                       </Text>
                     </View>
-                  </Pressable>
+                  </View>
                 </ImageBackground>
-              </View>
+              </Pressable>
 
               <View>
                 <ImageBackground

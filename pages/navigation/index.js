@@ -148,6 +148,7 @@ const AppNavigation = () => {
   const [email, setEmail] = useState("");
   const [phone_number, setPhone_number] = useState(null);
   const [password, setPassword] = useState("");
+  const [likes, setLikes] = useState([]);
 
   return (
     <Context.Provider
@@ -166,6 +167,8 @@ const AppNavigation = () => {
         nameB,
         phone_number,
         setPhone_number,
+        likes,
+        setLikes,
       }}
     >
       <NavigationContainer>
