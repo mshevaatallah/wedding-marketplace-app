@@ -8,10 +8,10 @@ import * as SplashScreen from "expo-splash-screen";
 import { Context } from "../../../navigation";
 
 const MakeUpOne = ({ navigation }) => {
-  const { likes, setLikes } = useContext(Context);
+  const { likes, setLikes, setID } = useContext(Context);
   function addTask() {
     const newLikes = {
-      id: Date.now(),
+      id: 1,
       date: new Date().toDateString(),
       toko: "Ameera Beauty",
       judul: "1 set paket make up",

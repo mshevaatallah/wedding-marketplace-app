@@ -13,7 +13,10 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 import * as SplashScreen from "expo-splash-screen";
 import { Context } from "../navigation";
 const Likes = ({ navigation }) => {
-  const { likes } = useContext(Context);
+  const { likes, setLikes } = useContext(Context);
+  function deleteLikes(id) {
+    setLikes(likes.filter((like) => like.id !== id));
+  }
   const [fontsLoaded] = useFonts({
     JakartaRegular: require("../../assets/fonts/JakartaRegular.ttf"),
     JakartaExtraB: require("../../assets/fonts/JakartaExtraB.ttf"),
@@ -133,7 +136,7 @@ const Likes = ({ navigation }) => {
                         name="trash-outline"
                         size={20}
                         suppressHighlighting={true}
-                        onPress={() => navigation.goBack()}
+                        onPress={() => deleteLikes(like.id)}
                       />
                       <Text
                         style={{

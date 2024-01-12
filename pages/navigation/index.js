@@ -145,6 +145,7 @@ const AppNavigation = () => {
 
   const [name, setName] = useState("");
   const [nameB, setNameB] = useState("");
+
   const [email, setEmail] = useState("");
   const [phone_number, setPhone_number] = useState(null);
   const [password, setPassword] = useState("");
@@ -168,6 +169,7 @@ const AppNavigation = () => {
         phone_number,
         setPhone_number,
         likes,
+
         setLikes,
       }}
     >
