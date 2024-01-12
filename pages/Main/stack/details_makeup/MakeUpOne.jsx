@@ -1,9 +1,16 @@
-import { StyleSheet, Text, View, SafeAreaView, ScrollView } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  SafeAreaView,
+  ScrollView,
+  Image,
+} from "react-native";
 import React, { useCallback, useContext, useState } from "react";
 import { StatusBar } from "expo-status-bar";
 import { useFonts } from "expo-font";
 import Ionicons from "@expo/vector-icons/Ionicons";
-
+import cocok1 from "../../../../assets/images/cocok1.jpeg";
 import * as SplashScreen from "expo-splash-screen";
 import { Context } from "../../../navigation";
 
@@ -95,7 +102,15 @@ const MakeUpOne = ({ navigation }) => {
 
                 backgroundColor: "#E5E5E5",
               }}
-            ></View>
+            >
+              <Image
+                source={cocok1}
+                style={{
+                  width: "100%",
+                  height: "100%",
+                }}
+              />
+            </View>
             <View style={{ marginHorizontal: 20, marginTop: 25 }}>
               <View>
                 <Text

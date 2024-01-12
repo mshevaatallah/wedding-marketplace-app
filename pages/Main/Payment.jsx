@@ -5,9 +5,11 @@ import {
   SafeAreaView,
   ScrollView,
   Pressable,
+  Image,
 } from "react-native";
 import React, { useCallback, useState } from "react";
-
+import gopay from "../../assets/images/gopay.png";
+import ovo from "../../assets/images/ovo.png";
 import { useFonts } from "expo-font";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import * as SplashScreen from "expo-splash-screen";
@@ -157,12 +159,21 @@ const Payment = ({ navigation }) => {
                 setColors3(false);
               }}
             >
-              <Ionicons
-                name="card-outline"
-                size={40}
-                suppressHighlighting={true}
-                onPress={() => navigation.goBack()}
-              />
+              <View
+                style={{
+                  width: 40,
+                  height: 40,
+                }}
+              >
+                <Image
+                  source={gopay}
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                  }}
+                />
+              </View>
+
               <View
                 style={{
                   height: 30,
@@ -217,12 +228,23 @@ const Payment = ({ navigation }) => {
                 setColors(false);
               }}
             >
-              <Ionicons
-                name="card-outline"
-                size={40}
-                suppressHighlighting={true}
-                onPress={() => navigation.goBack()}
-              />
+              <View
+                style={{
+                  width: 40,
+                  height: 40,
+                  borderRadius: 50,
+                }}
+              >
+                <Image
+                  source={ovo}
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    borderRadius: 50,
+                  }}
+                />
+              </View>
+
               <View
                 style={{
                   height: 30,

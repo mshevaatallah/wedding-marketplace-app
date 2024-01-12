@@ -5,12 +5,16 @@ import {
   SafeAreaView,
   ScrollView,
   Pressable,
+  Image,
 } from "react-native";
 import React, { useCallback } from "react";
 import { StatusBar } from "expo-status-bar";
 import { useFonts } from "expo-font";
 import Ionicons from "@expo/vector-icons/Ionicons";
-
+import cocok1 from "../../../assets/images/cocok1.jpeg";
+import cocok2 from "../../../assets/images/cocok2.jpeg";
+import cocok3 from "../../../assets/images/cocok3.jpeg";
+import cocok4 from "../../../assets/images/cocok4.jpeg";
 import * as SplashScreen from "expo-splash-screen";
 const MakeUp = ({ navigation }) => {
   const [fontsLoaded] = useFonts({
@@ -78,7 +82,16 @@ const MakeUp = ({ navigation }) => {
             onPress={() => navigation.navigate("MakeupOne")}
             style={styles.View_container}
           >
-            <View style={styles.box_image}></View>
+            <View style={styles.box_image}>
+              <Image
+                source={cocok1}
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  borderRadius: 10,
+                }}
+              />
+            </View>
             <Text
               style={{
                 fontFamily: "JakartaExtraB",
@@ -117,7 +130,16 @@ const MakeUp = ({ navigation }) => {
             </Text>
           </Pressable>
           <View style={styles.View_container}>
-            <View style={styles.box_image}></View>
+            <View style={styles.box_image}>
+              <Image
+                source={cocok2}
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  borderRadius: 10,
+                }}
+              />
+            </View>
             <Text
               style={{
                 fontFamily: "JakartaExtraB",
@@ -156,7 +178,16 @@ const MakeUp = ({ navigation }) => {
             </Text>
           </View>
           <View style={styles.View_container}>
-            <View style={styles.box_image}></View>
+            <View style={styles.box_image}>
+              <Image
+                source={cocok3}
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  borderRadius: 10,
+                }}
+              />
+            </View>
             <Text
               style={{
                 fontFamily: "JakartaExtraB",
@@ -195,7 +226,16 @@ const MakeUp = ({ navigation }) => {
             </Text>
           </View>
           <View style={styles.View_container}>
-            <View style={styles.box_image}></View>
+            <View style={styles.box_image}>
+              <Image
+                source={cocok4}
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  borderRadius: 10,
+                }}
+              />
+            </View>
             <Text
               style={{
                 fontFamily: "JakartaExtraB",
