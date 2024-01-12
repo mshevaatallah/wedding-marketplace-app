@@ -7,7 +7,7 @@ import {
   Pressable,
 } from "react-native";
 import React, { useCallback, useContext, useState } from "react";
-
+import Ionicons from "@expo/vector-icons/Ionicons";
 import { useFonts } from "expo-font";
 
 import * as SplashScreen from "expo-splash-screen";
@@ -59,7 +59,17 @@ const Profile = ({ navigation }) => {
         }}
       >
         <View style={styles.box_transaksi}>
-          <View style={styles.photo_profil}></View>
+          <View style={styles.photo_profil}>
+            <Ionicons
+              name="person-circle-outline"
+              size={60}
+              color="#FF4F6F"
+              style={{
+                marginLeft: 0,
+                marginTop: 0,
+              }}
+            />
+          </View>
           <View>
             <Text
               style={{
@@ -80,7 +90,7 @@ const Profile = ({ navigation }) => {
                 letterSpacing: 0.5,
               }}
             >
-              Pelajar
+              {phone_number}
             </Text>
           </View>
         </View>
@@ -323,5 +333,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     marginLeft: 40,
     marginRight: 20,
+    justifyContent: "center",
+    alignItems: "center",
   },
 });
