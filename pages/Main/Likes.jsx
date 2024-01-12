@@ -199,7 +199,7 @@ const Likes = ({ navigation }) => {
               color: "#fff",
             }}
           >
-            Rp.1.000.000
+            {likes.length} Item
           </Text>
         </Pressable>
       </View>
