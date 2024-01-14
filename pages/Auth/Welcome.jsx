@@ -4,13 +4,13 @@ import {
   View,
   SafeAreaView,
   Pressable,
-  ImageBackground,
+  Image,
 } from "react-native";
 
 import React, { useCallback } from "react";
 import { StatusBar } from "expo-status-bar";
 import { useFonts } from "expo-font";
-import bg_image from "../../assets/images/wedding_bg.jpg";
+import bg_image from "../../assets/images/welcome.png";
 
 import * as SplashScreen from "expo-splash-screen";
 const Welcome = ({ navigation }) => {
@@ -18,6 +18,7 @@ const Welcome = ({ navigation }) => {
     JakartaRegular: require("../../assets/fonts/JakartaRegular.ttf"),
     JakartaExtraB: require("../../assets/fonts/JakartaExtraB.ttf"),
     JakartaMedium: require("../../assets/fonts/JakartaMedium.ttf"),
+    JakartaBold: require("../../assets/fonts/Jakarta_Bold.ttf"),
   });
   const onLayoutRootView = useCallback(async () => {
     if (fontsLoaded) {
@@ -33,17 +34,37 @@ const Welcome = ({ navigation }) => {
     <SafeAreaView onLayout={onLayoutRootView}>
       <StatusBar style="dark" />
       <View style={styles.image_container}>
-        <ImageBackground
+        <Image
           source={bg_image}
-          resizeMode="cover"
           style={{
-            flex: 1,
-            width: "100%",
-            height: "100%",
-            borderEndStartRadius: 20,
-            borderBottomEndRadius: 20,
+            width: "90%",
+            height: "50%",
           }}
-        ></ImageBackground>
+        />
+        <Text
+          style={{
+            fontFamily: "JakartaExtraB",
+            fontSize: 20,
+            textAlign: "center",
+            color: "#24282c",
+
+            marginTop: 80,
+          }}
+        >
+          Beli dan cari perlengkapan untuk pernikahan anda{" "}
+        </Text>
+        <Text
+          style={{
+            fontFamily: "JakartaBold",
+            fontSize: 15,
+            textAlign: "center",
+            color: "#585858",
+
+            marginTop: 15,
+          }}
+        >
+          Wedding Marketplace terlengkap di Indonesia
+        </Text>
       </View>
       <View style={{ marginHorizontal: 20, flex: 1, marginTop: 25 }}>
         <Pressable onPress={() => navigation.navigate("Login")}>

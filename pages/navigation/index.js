@@ -30,6 +30,8 @@ import MakeUpFour from "../Main/stack/details_makeup/MakeUpFour";
 import MakeUpThree from "../Main/stack/details_makeup/MakeUpThree";
 import Busana from "../Main/stack/Busana";
 import BusanaOne from "../Main/stack/details_busana/BusanaOne";
+import BusanaFour from "../Main/stack/details_busana/BusanaFour";
+import BusanaThree from "../Main/stack/details_busana/BusanaThree";
 
 export const Context = React.createContext(null);
 const Stack = createNativeStackNavigator();
@@ -199,6 +201,16 @@ const AppNavigation = () => {
             <Stack.Screen
               name="BusanaOne"
               component={BusanaOne}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="BusanaThree"
+              component={BusanaThree}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="BusanaFour"
+              component={BusanaFour}
               options={{ headerShown: false }}
             />
             <Stack.Screen
