@@ -7,7 +7,7 @@ import {
   ScrollView,
   Pressable,
 } from "react-native";
-
+import { OtpInput } from "react-native-otp-entry";
 import { StatusBar } from "expo-status-bar";
 import React, { useCallback, useContext, useState } from "react";
 import { useFonts } from "expo-font";
@@ -15,6 +15,7 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 import * as SplashScreen from "expo-splash-screen";
 import OTPInputView from "@twotalltotems/react-native-otp-input";
 import { Context } from "../navigation";
+import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 
 const InputOTP = ({ route, navigation }) => {
   const { value, selected } = route.params;
@@ -34,6 +35,7 @@ const InputOTP = ({ route, navigation }) => {
   if (!fontsLoaded) {
     return null;
   }
+
   const handlePress = () => {
     if (code.length < 4) {
       alert("Kode OTP harus 4 digit");
@@ -51,7 +53,7 @@ const InputOTP = ({ route, navigation }) => {
         suppressHighlighting={true}
         onPress={() => navigation.goBack()}
       />
-      <KeyboardAvoidingView behavior={"padding"} style={{ flex: 1 }}>
+      <KeyboardAwareScrollView>
         <ScrollView>
           <View>
             <Text
@@ -73,7 +75,7 @@ const InputOTP = ({ route, navigation }) => {
               ({selected}) {value}
             </Text>
           </View>
-          <OTPInputView
+          {/* <OTPInputView
             style={{
               width: "95%",
               height: 120,
@@ -85,10 +87,35 @@ const InputOTP = ({ route, navigation }) => {
             autoFocusOnLoad
             codeInputFieldStyle={styles.underlineStyleBase}
             codeInputHighlightStyle={styles.underlineStyleHighLighted}
+            
             onCodeFilled={(code) => {
               setCode(code);
             }}
-          />
+          /> */}
+          {/* <OtpInput value={otp} onChange={setOtp} numInputs={4} /> */}
+          <View
+            style={{
+              marginTop: 40,
+              marginBottom: 30,
+            }}
+          >
+            <OtpInput
+              numberOfDigits={4}
+              focusColor="#FF4F6F"
+              focusStickBlinkingDuration={500}
+              onTextChange={(text) => setCode(text)}
+              onFilled={(text) => console.log(`OTP is ${text}`)}
+              theme={{
+                containerStyle: styles.container,
+                inputsContainerStyle: styles.inputsContainer,
+                pinCodeContainerStyle: styles.pinCodeContainer,
+                pinCodeTextStyle: styles.pinCodeText,
+                focusStickStyle: styles.focusStick,
+                focusedPinCodeContainerStyle: styles.activePinCodeContainer,
+              }}
+            />
+          </View>
+
           <Text style={{ fontFamily: "JakartaMedium", fontSize: 13 }}>
             Belum mendapatkan kode?{" "}
             <Text style={{ color: "#FF4F6F", textDecorationLine: "underline" }}>
@@ -97,14 +124,19 @@ const InputOTP = ({ route, navigation }) => {
             </Text>
           </Text>
         </ScrollView>
-        <Pressable onPress={handlePress}>
+        <Pressable
+          onPress={handlePress}
+          style={{
+            marginTop: 20,
+          }}
+        >
           <View style={styles.button_style}>
             <Text style={{ fontFamily: "JakartaExtraB", color: "white" }}>
               Lanjutkan
             </Text>
           </View>
         </Pressable>
-      </KeyboardAvoidingView>
+      </KeyboardAwareScrollView>
     </SafeAreaView>
   );
 };

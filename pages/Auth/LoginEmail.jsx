@@ -14,6 +14,7 @@ import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { Context } from "../navigation";
+import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 
 SplashScreen.preventAutoHideAsync();
 const LoginEmail = ({ navigation }) => {
@@ -59,8 +60,8 @@ const LoginEmail = ({ navigation }) => {
         suppressHighlighting={true}
         onPress={() => navigation.goBack()}
       />
-      <KeyboardAvoidingView behavior={"padding"} style={{ flex: 1 }}>
-        <ScrollView showsVerticalScrollIndicator={false}>
+      <KeyboardAwareScrollView>
+        <ScrollView showsVerticalScrollIndicator={false} style={{}}>
           <View>
             <Text
               style={{
@@ -162,7 +163,7 @@ const LoginEmail = ({ navigation }) => {
             </Text>
           </View>
         </Pressable>
-      </KeyboardAvoidingView>
+      </KeyboardAwareScrollView>
     </SafeAreaView>
   );
 };
@@ -182,5 +183,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     marginBottom: 15,
+    marginTop: 30,
   },
 });

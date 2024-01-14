@@ -8,6 +8,7 @@ import {
   Pressable,
   ScrollView,
 } from "react-native";
+import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import { StatusBar } from "expo-status-bar";
 import React, { useCallback, useContext, useState } from "react";
 import { useFonts } from "expo-font";
@@ -76,7 +77,7 @@ const RegisterAccount = ({ navigation }) => {
         suppressHighlighting={true}
         onPress={() => navigation.goBack()}
       />
-      <KeyboardAvoidingView behavior={"padding"} style={{ flex: 1 }}>
+      <KeyboardAwareScrollView showsVerticalScrollIndicator={false}>
         <ScrollView showsVerticalScrollIndicator={false} style={{}}>
           <View>
             <Text
@@ -322,7 +323,7 @@ const RegisterAccount = ({ navigation }) => {
             </Text>
           </View>
         </Pressable>
-      </KeyboardAvoidingView>
+      </KeyboardAwareScrollView>
     </SafeAreaView>
   );
 };

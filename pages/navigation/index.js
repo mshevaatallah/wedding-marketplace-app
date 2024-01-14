@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, SafeAreaView } from "react-native";
 import React, { useContext, useState } from "react";
 
 import { NavigationContainer } from "@react-navigation/native";
@@ -164,175 +164,183 @@ const AppNavigation = () => {
   const [likes, setLikes] = useState([]);
 
   return (
-    <Context.Provider
-      value={{
-        isLoggedIn,
-        toggleLogged,
-        setIsLoggedIn,
-        setName,
-        setEmail,
-        setPassword,
-        setPhone_number,
-        setNameB,
-        name,
-        email,
-        password,
-        nameB,
-        phone_number,
-        setPhone_number,
-        likes,
+    <SafeAreaView style={styles.androidSafeArea}>
+      <Context.Provider
+        value={{
+          isLoggedIn,
+          toggleLogged,
+          setIsLoggedIn,
+          setName,
+          setEmail,
+          setPassword,
+          setPhone_number,
+          setNameB,
+          name,
+          email,
+          password,
+          nameB,
+          phone_number,
+          setPhone_number,
+          likes,
 
-        setLikes,
-      }}
-    >
-      <NavigationContainer>
-        {isLoggedIn ? (
-          <Stack.Navigator>
-            <Stack.Screen
-              name="Tabs"
-              component={MyTabs}
-              options={{ headerShown: false }}
-            />
-            <Stack.Screen
-              name="Makeup"
-              component={MakeUp}
-              options={{ headerShown: false }}
-            />
-            <Stack.Screen
-              name="Media"
-              component={Media}
-              options={{ headerShown: false }}
-            />
-            <Stack.Screen
-              name="MediaOne"
-              component={MediaOne}
-              options={{ headerShown: false }}
-            />
-            <Stack.Screen
-              name="MediaTwo"
-              component={MediaTwo}
-              options={{ headerShown: false }}
-            />
-            <Stack.Screen
-              name="MediaThree"
-              component={MediaThree}
-              options={{ headerShown: false }}
-            />
-            <Stack.Screen
-              name="MediaFour"
-              component={MediaFour}
-              options={{ headerShown: false }}
-            />
-            <Stack.Screen
-              name="Busana"
-              component={Busana}
-              options={{ headerShown: false }}
-            />
-            <Stack.Screen
-              name="BusanaOne"
-              component={BusanaOne}
-              options={{ headerShown: false }}
-            />
-            <Stack.Screen
-              name="BusanaThree"
-              component={BusanaThree}
-              options={{ headerShown: false }}
-            />
-            <Stack.Screen
-              name="BusanaFour"
-              component={BusanaFour}
-              options={{ headerShown: false }}
-            />
-            <Stack.Screen
-              name="MakeupOne"
-              component={MakeUpOne}
-              options={{ headerShown: false }}
-            />
-            <Stack.Screen
-              name="MakeupTwo"
-              component={MakeUpTwo}
-              options={{ headerShown: false }}
-            />
-            <Stack.Screen
-              name="MakeupThree"
-              component={MakeUpThree}
-              options={{ headerShown: false }}
-            />
-            <Stack.Screen
-              name="MakeupFour"
-              component={MakeUpFour}
-              options={{ headerShown: false }}
-            />
-            <Stack.Screen
-              name="Likes"
-              component={Likes}
-              options={{ headerShown: false }}
-            />
-            <Stack.Screen
-              name="Payment"
-              component={Payment}
-              options={{ headerShown: false }}
-            />
-            <Stack.Screen
-              name="AlamatInput"
-              component={AlamatInput}
-              options={{ headerShown: false }}
-            />
-            <Stack.Screen
-              name="SellerChat"
-              component={SellerChat}
-              options={{ headerShown: false }}
-            />
-            <Stack.Screen
-              name="PusatBantuan"
-              component={PusatBantuan}
-              options={{ headerShown: false }}
-            />
-            <Stack.Screen
-              name="EditProfile"
-              component={EditProfile}
-              options={{ headerShown: false }}
-            />
-          </Stack.Navigator>
-        ) : (
-          <Stack.Navigator>
-            <Stack.Screen
-              name="Welcome"
-              component={Welcome}
-              options={{ headerShown: false }}
-            />
-            <Stack.Screen
-              name="RegisterAccount"
-              component={RegisterAccount}
-              options={{ headerShown: false }}
-            />
-            <Stack.Screen
-              name="RegisterOTP"
-              component={RegisterOTP}
-              options={{ headerShown: false }}
-            />
-            <Stack.Screen
-              name="InputOTP"
-              component={InputOTP}
-              options={{ headerShown: false }}
-            />
-            <Stack.Screen
-              name="Login"
-              component={Login}
-              options={{ headerShown: false }}
-            />
-            <Stack.Screen
-              name="LoginEmail"
-              component={LoginEmail}
-              options={{ headerShown: false }}
-            />
-          </Stack.Navigator>
-        )}
-      </NavigationContainer>
-    </Context.Provider>
+          setLikes,
+        }}
+      >
+        <NavigationContainer>
+          {isLoggedIn ? (
+            <Stack.Navigator>
+              <Stack.Screen
+                name="Tabs"
+                component={MyTabs}
+                options={{ headerShown: false }}
+              />
+              <Stack.Screen
+                name="Makeup"
+                component={MakeUp}
+                options={{ headerShown: false }}
+              />
+              <Stack.Screen
+                name="Media"
+                component={Media}
+                options={{ headerShown: false }}
+              />
+              <Stack.Screen
+                name="MediaOne"
+                component={MediaOne}
+                options={{ headerShown: false }}
+              />
+              <Stack.Screen
+                name="MediaTwo"
+                component={MediaTwo}
+                options={{ headerShown: false }}
+              />
+              <Stack.Screen
+                name="MediaThree"
+                component={MediaThree}
+                options={{ headerShown: false }}
+              />
+              <Stack.Screen
+                name="MediaFour"
+                component={MediaFour}
+                options={{ headerShown: false }}
+              />
+              <Stack.Screen
+                name="Busana"
+                component={Busana}
+                options={{ headerShown: false }}
+              />
+              <Stack.Screen
+                name="BusanaOne"
+                component={BusanaOne}
+                options={{ headerShown: false }}
+              />
+              <Stack.Screen
+                name="BusanaThree"
+                component={BusanaThree}
+                options={{ headerShown: false }}
+              />
+              <Stack.Screen
+                name="BusanaFour"
+                component={BusanaFour}
+                options={{ headerShown: false }}
+              />
+              <Stack.Screen
+                name="MakeupOne"
+                component={MakeUpOne}
+                options={{ headerShown: false }}
+              />
+              <Stack.Screen
+                name="MakeupTwo"
+                component={MakeUpTwo}
+                options={{ headerShown: false }}
+              />
+              <Stack.Screen
+                name="MakeupThree"
+                component={MakeUpThree}
+                options={{ headerShown: false }}
+              />
+              <Stack.Screen
+                name="MakeupFour"
+                component={MakeUpFour}
+                options={{ headerShown: false }}
+              />
+              <Stack.Screen
+                name="Likes"
+                component={Likes}
+                options={{ headerShown: false }}
+              />
+              <Stack.Screen
+                name="Payment"
+                component={Payment}
+                options={{ headerShown: false }}
+              />
+              <Stack.Screen
+                name="AlamatInput"
+                component={AlamatInput}
+                options={{ headerShown: false }}
+              />
+              <Stack.Screen
+                name="SellerChat"
+                component={SellerChat}
+                options={{ headerShown: false }}
+              />
+              <Stack.Screen
+                name="PusatBantuan"
+                component={PusatBantuan}
+                options={{ headerShown: false }}
+              />
+              <Stack.Screen
+                name="EditProfile"
+                component={EditProfile}
+                options={{ headerShown: false }}
+              />
+            </Stack.Navigator>
+          ) : (
+            <Stack.Navigator>
+              <Stack.Screen
+                name="Welcome"
+                component={Welcome}
+                options={{ headerShown: false }}
+              />
+              <Stack.Screen
+                name="RegisterAccount"
+                component={RegisterAccount}
+                options={{ headerShown: false }}
+              />
+              <Stack.Screen
+                name="RegisterOTP"
+                component={RegisterOTP}
+                options={{ headerShown: false }}
+              />
+              <Stack.Screen
+                name="InputOTP"
+                component={InputOTP}
+                options={{ headerShown: false }}
+              />
+              <Stack.Screen
+                name="Login"
+                component={Login}
+                options={{ headerShown: false }}
+              />
+              <Stack.Screen
+                name="LoginEmail"
+                component={LoginEmail}
+                options={{ headerShown: false }}
+              />
+            </Stack.Navigator>
+          )}
+        </NavigationContainer>
+      </Context.Provider>
+    </SafeAreaView>
   );
 };
 
 export default AppNavigation;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  androidSafeArea: {
+    flex: 1,
+
+    paddingTop: Platform.OS === "android" ? 25 : 0,
+  },
+});

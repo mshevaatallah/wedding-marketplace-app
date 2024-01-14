@@ -15,6 +15,7 @@ import * as SplashScreen from "expo-splash-screen";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { SelectList } from "react-native-dropdown-select-list";
 import { Context } from "../navigation";
+import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 
 SplashScreen.preventAutoHideAsync();
 const Login = ({ navigation }) => {
@@ -66,8 +67,8 @@ const Login = ({ navigation }) => {
         suppressHighlighting={true}
         onPress={() => navigation.goBack()}
       />
-      <KeyboardAvoidingView behavior={"padding"} style={{ flex: 1 }}>
-        <ScrollView>
+      <KeyboardAwareScrollView behavior={"padding"}>
+        <ScrollView showsVerticalScrollIndicator={false}>
           <View>
             <Text
               style={{
@@ -176,7 +177,7 @@ const Login = ({ navigation }) => {
             </Pressable>
           </View>
         </ScrollView>
-      </KeyboardAvoidingView>
+      </KeyboardAwareScrollView>
     </SafeAreaView>
   );
 };
