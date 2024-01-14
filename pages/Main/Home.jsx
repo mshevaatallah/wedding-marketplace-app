@@ -152,13 +152,13 @@ const Home = ({ navigation }) => {
                   </Pressable>
                 </ImageBackground>
               </Pressable>
-              <View>
+              <Pressable onPress={() => navigation.navigate("Media")}>
                 <ImageBackground
                   source={MediaImage}
                   style={styles.category_box}
                   imageStyle={{ borderRadius: 10 }}
                 >
-                  <Pressable onPress={() => navigation.navigate("Makeup")}>
+                  <Pressable onPress={() => navigation.navigate("Media")}>
                     <View style={styles.Badge_style}>
                       <Text
                         style={{
@@ -172,7 +172,7 @@ const Home = ({ navigation }) => {
                     </View>
                   </Pressable>
                 </ImageBackground>
-              </View>
+              </Pressable>
             </View>
           </ScrollView>
           <View style={{ marginTop: 20 }}>

@@ -39,6 +39,7 @@ const Profile = ({ navigation }) => {
           justifyContent: "center",
           alignItems: "center",
           marginTop: 10,
+          paddingBottom: 20,
         }}
       >
         <Text
@@ -53,148 +54,237 @@ const Profile = ({ navigation }) => {
         </Text>
       </View>
       <ScrollView
+        showsVerticalScrollIndicator={false}
         style={{
           marginHorizontal: 25,
-          marginTop: 40,
+          marginBottom: 20,
         }}
       >
-        <View style={styles.box_transaksi}>
-          <View style={styles.photo_profil}>
-            <Ionicons
-              name="person-circle-outline"
-              size={60}
-              color="#FF4F6F"
-              style={{
-                marginLeft: 0,
-                marginTop: 0,
-              }}
-            />
-          </View>
-          <View>
-            <Text
-              style={{
-                fontFamily: "JakartaBold",
-                fontSize: 20,
-                color: "#180004",
-
-                marginBottom: 5,
-              }}
-            >
-              {name + " " + nameB}
-            </Text>
-            <Text
-              style={{
-                fontFamily: "JakartaBold",
-                fontSize: 14,
-                color: "#858585",
-                letterSpacing: 0.5,
-              }}
-            >
-              {phone_number}
-            </Text>
-          </View>
-        </View>
-        <View style={styles.box_ubarprofil}>
-          <Text
-            style={{
-              fontFamily: "JakartaExtraB",
-              fontSize: 13,
-              maxWidth: 100,
-              color: "#FFFFFF",
-              letterSpacing: 0.5,
-            }}
-          >
-            Ubah profilmu disini
-          </Text>
-          <Pressable
-            onPress={() => navigation.navigate("EditProfile")}
-            style={{
-              backgroundColor: "white",
-              paddingHorizontal: 40,
-              paddingVertical: 12,
-              borderRadius: 30,
-            }}
-          >
-            <Text
-              style={{
-                fontFamily: "JakartaExtraB",
-                fontSize: 13,
-                color: "#FF4F6F",
-
-                letterSpacing: 0.5,
-              }}
-            >
-              Ubah profil
-            </Text>
-          </Pressable>
-        </View>
-        <View style={styles.pusat_bantuan}>
-          <Text
-            style={{
-              fontFamily: "JakartaExtraB",
-              fontSize: 13,
-              maxWidth: 100,
-              color: "#FFFFFF",
-              letterSpacing: 0.5,
-            }}
-          >
-            Butuh bantuan ?
-          </Text>
-          <Pressable
-            onPress={() => navigation.navigate("PusatBantuan")}
-            style={{
-              backgroundColor: "white",
-              paddingHorizontal: 28,
-              paddingVertical: 12,
-              borderRadius: 30,
-            }}
-          >
-            <Text
-              style={{
-                fontFamily: "JakartaExtraB",
-                fontSize: 13,
-                color: "#FF4F6F",
-
-                letterSpacing: 0.5,
-              }}
-            >
-              Pusat bantuan
-            </Text>
-          </Pressable>
-        </View>
         <View
           style={{
-            marginTop: 40,
+            marginBottom: 50,
           }}
         >
-          <Text
-            style={{
-              fontFamily: "JakartaExtraB",
-              fontSize: 20,
-              color: "#24282c",
-              letterSpacing: 1,
-              marginBottom: 20,
-            }}
-          >
-            Profil Detail
-          </Text>
+          <View style={styles.box_transaksi}>
+            <View style={styles.photo_profil}>
+              <Ionicons
+                name="person-circle-outline"
+                size={60}
+                color="#FF4F6F"
+                style={{
+                  marginLeft: 0,
+                  marginTop: 0,
+                }}
+              />
+            </View>
+            <View>
+              <Text
+                style={{
+                  fontFamily: "JakartaBold",
+                  fontSize: 20,
+                  color: "#180004",
+
+                  marginBottom: 5,
+                }}
+              >
+                {name + " " + nameB}
+              </Text>
+              <Text
+                style={{
+                  fontFamily: "JakartaBold",
+                  fontSize: 14,
+                  color: "#858585",
+                  letterSpacing: 0.5,
+                }}
+              >
+                {phone_number}
+              </Text>
+            </View>
+          </View>
+          <View style={styles.box_ubarprofil}>
+            <Text
+              style={{
+                fontFamily: "JakartaExtraB",
+                fontSize: 13,
+                maxWidth: 100,
+                color: "#FFFFFF",
+                letterSpacing: 0.5,
+              }}
+            >
+              Ubah profilmu disini
+            </Text>
+            <Pressable
+              onPress={() => navigation.navigate("EditProfile")}
+              style={{
+                backgroundColor: "white",
+                paddingHorizontal: 40,
+                paddingVertical: 12,
+                borderRadius: 30,
+              }}
+            >
+              <Text
+                style={{
+                  fontFamily: "JakartaExtraB",
+                  fontSize: 13,
+                  color: "#FF4F6F",
+
+                  letterSpacing: 0.5,
+                }}
+              >
+                Ubah profil
+              </Text>
+            </Pressable>
+          </View>
+          <View style={styles.pusat_bantuan}>
+            <Text
+              style={{
+                fontFamily: "JakartaExtraB",
+                fontSize: 13,
+                maxWidth: 100,
+                color: "#FFFFFF",
+                letterSpacing: 0.5,
+              }}
+            >
+              Butuh bantuan ?
+            </Text>
+            <Pressable
+              onPress={() => navigation.navigate("PusatBantuan")}
+              style={{
+                backgroundColor: "white",
+                paddingHorizontal: 28,
+                paddingVertical: 12,
+                borderRadius: 30,
+              }}
+            >
+              <Text
+                style={{
+                  fontFamily: "JakartaExtraB",
+                  fontSize: 13,
+                  color: "#FF4F6F",
+
+                  letterSpacing: 0.5,
+                }}
+              >
+                Pusat bantuan
+              </Text>
+            </Pressable>
+          </View>
           <View
             style={{
-              marginTop: 20,
-              flexDirection: "row",
-              justifyContent: "space-between",
+              marginTop: 40,
             }}
           >
             <Text
               style={{
                 fontFamily: "JakartaExtraB",
-                fontSize: 14,
-                color: "#979797",
+                fontSize: 20,
+                color: "#24282c",
                 letterSpacing: 1,
+                marginBottom: 20,
               }}
             >
-              Nama
+              Profil Detail
             </Text>
+            <View
+              style={{
+                marginTop: 20,
+                flexDirection: "row",
+                justifyContent: "space-between",
+              }}
+            >
+              <Text
+                style={{
+                  fontFamily: "JakartaExtraB",
+                  fontSize: 14,
+                  color: "#979797",
+                  letterSpacing: 1,
+                }}
+              >
+                Nama
+              </Text>
+              <Text
+                style={{
+                  fontFamily: "JakartaExtraB",
+                  fontSize: 14,
+                  color: "#FF4F6F",
+                  letterSpacing: 1,
+                }}
+              >
+                {name + " " + nameB}
+              </Text>
+            </View>
+            <View
+              style={{
+                marginTop: 30,
+                flexDirection: "row",
+                justifyContent: "space-between",
+              }}
+            >
+              <Text
+                style={{
+                  fontFamily: "JakartaExtraB",
+                  fontSize: 14,
+                  color: "#979797",
+                  letterSpacing: 1,
+                }}
+              >
+                Email
+              </Text>
+              <Text
+                style={{
+                  fontFamily: "JakartaExtraB",
+                  fontSize: 14,
+                  color: "#FF4F6F",
+                  letterSpacing: 1,
+                }}
+              >
+                {email}
+              </Text>
+            </View>
+            <View
+              style={{
+                marginTop: 30,
+                flexDirection: "row",
+                justifyContent: "space-between",
+              }}
+            >
+              <Text
+                style={{
+                  fontFamily: "JakartaExtraB",
+                  fontSize: 14,
+                  color: "#979797",
+                  letterSpacing: 1,
+                }}
+              >
+                No. Handphone
+              </Text>
+              <Text
+                style={{
+                  fontFamily: "JakartaExtraB",
+                  fontSize: 14,
+                  color: "#FF4F6F",
+                  letterSpacing: 1,
+                }}
+              >
+                {phone_number}
+              </Text>
+            </View>
+          </View>
+          <Pressable
+            onPress={() => {
+              setIsLoggedIn(false);
+            }}
+            style={{
+              width: "100%",
+              height: 50,
+              borderColor: "#FF4F6F",
+              borderWidth: 2,
+              justifyContent: "center",
+              alignItems: "center",
+              borderRadius: 10,
+              marginTop: 40,
+            }}
+          >
             <Text
               style={{
                 fontFamily: "JakartaExtraB",
@@ -203,92 +293,10 @@ const Profile = ({ navigation }) => {
                 letterSpacing: 1,
               }}
             >
-              {name + " " + nameB}
+              Keluar
             </Text>
-          </View>
-          <View
-            style={{
-              marginTop: 30,
-              flexDirection: "row",
-              justifyContent: "space-between",
-            }}
-          >
-            <Text
-              style={{
-                fontFamily: "JakartaExtraB",
-                fontSize: 14,
-                color: "#979797",
-                letterSpacing: 1,
-              }}
-            >
-              Email
-            </Text>
-            <Text
-              style={{
-                fontFamily: "JakartaExtraB",
-                fontSize: 14,
-                color: "#FF4F6F",
-                letterSpacing: 1,
-              }}
-            >
-              {email}
-            </Text>
-          </View>
-          <View
-            style={{
-              marginTop: 30,
-              flexDirection: "row",
-              justifyContent: "space-between",
-            }}
-          >
-            <Text
-              style={{
-                fontFamily: "JakartaExtraB",
-                fontSize: 14,
-                color: "#979797",
-                letterSpacing: 1,
-              }}
-            >
-              No. Handphone
-            </Text>
-            <Text
-              style={{
-                fontFamily: "JakartaExtraB",
-                fontSize: 14,
-                color: "#FF4F6F",
-                letterSpacing: 1,
-              }}
-            >
-              {phone_number}
-            </Text>
-          </View>
+          </Pressable>
         </View>
-        <Pressable
-          onPress={() => {
-            setIsLoggedIn(false);
-          }}
-          style={{
-            width: "100%",
-            height: 50,
-            borderColor: "#FF4F6F",
-            borderWidth: 2,
-            justifyContent: "center",
-            alignItems: "center",
-            borderRadius: 10,
-            marginTop: 40,
-          }}
-        >
-          <Text
-            style={{
-              fontFamily: "JakartaExtraB",
-              fontSize: 14,
-              color: "#FF4F6F",
-              letterSpacing: 1,
-            }}
-          >
-            Keluar
-          </Text>
-        </Pressable>
       </ScrollView>
     </SafeAreaView>
   );

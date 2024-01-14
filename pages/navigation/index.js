@@ -32,6 +32,11 @@ import Busana from "../Main/stack/Busana";
 import BusanaOne from "../Main/stack/details_busana/BusanaOne";
 import BusanaFour from "../Main/stack/details_busana/BusanaFour";
 import BusanaThree from "../Main/stack/details_busana/BusanaThree";
+import Media from "../Main/stack/Media";
+import MediaOne from "../Main/stack/details_media/MediaOne";
+import MediaTwo from "../Main/stack/details_media/MediaTwo";
+import MediaThree from "../Main/stack/details_media/MediaThree";
+import MediaFour from "../Main/stack/details_media/MediaFour";
 
 export const Context = React.createContext(null);
 const Stack = createNativeStackNavigator();
@@ -191,6 +196,31 @@ const AppNavigation = () => {
             <Stack.Screen
               name="Makeup"
               component={MakeUp}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="Media"
+              component={Media}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="MediaOne"
+              component={MediaOne}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="MediaTwo"
+              component={MediaTwo}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="MediaThree"
+              component={MediaThree}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="MediaFour"
+              component={MediaFour}
               options={{ headerShown: false }}
             />
             <Stack.Screen
