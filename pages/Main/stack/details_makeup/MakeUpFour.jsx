@@ -18,7 +18,7 @@ const MakeUpFour = ({ navigation }) => {
   const { likes, setLikes, setID } = useContext(Context);
   function addTask() {
     const newLikes = {
-      id: 1,
+      id: 4,
       date: new Date().toDateString(),
       toko: "Ameera Beauty",
       judul: "1 set paket make up",

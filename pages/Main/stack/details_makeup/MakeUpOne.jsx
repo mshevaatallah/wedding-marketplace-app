@@ -20,7 +20,7 @@ const MakeUpOne = ({ navigation }) => {
     const newLikes = {
       id: 1,
       date: new Date().toDateString(),
-      toko: "Ameera Beauty",
+      toko: " Beauty Salon",
       judul: "1 set paket make up",
       price: "Rp.400.000",
       completed: false,

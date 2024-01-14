@@ -18,11 +18,11 @@ const BusanaThree = ({ navigation }) => {
   const { likes, setLikes, setID } = useContext(Context);
   function addTask() {
     const newLikes = {
-      id: 1,
+      id: 7,
       date: new Date().toDateString(),
-      toko: "Ameera Beauty",
-      judul: "1 set paket make up",
-      price: "Rp.400.000",
+      toko: "Yamigamoi Dress",
+      judul: "1 set paket dress ",
+      price: "Rp.800.000",
       completed: false,
     };
     setLikes([...likes, newLikes]);
