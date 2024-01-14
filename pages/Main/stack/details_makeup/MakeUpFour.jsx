@@ -158,8 +158,8 @@ const MakeUpFour = ({ navigation }) => {
                     marginTop: 10,
                   }}
                 >
-                  Merupakan paket make up yang murah dan paling terbaik untuk
-                  anda{" "}
+                  Merupakan paket make up murah dan lenglap yang paling terbaik
+                  untuk anda{" "}
                 </Text>
                 <View
                   style={{
@@ -190,26 +190,13 @@ const MakeUpFour = ({ navigation }) => {
                     marginTop: 10,
                   }}
                 >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                  at efficitur urna. Quisque at sem justo. Sed in vulputate
-                  lacus. In eu neque dui. Fusce et tempus est. Duis pulvinar
-                  libero eu elementum interdum. Donec tristique eget sem in
-                  cursus. Fusce in magna efficitur massa rhoncus euismod.
-                  Integer tincidunt nisl neque, in tristique dolor pretium nec.
-                  Morbi metus urna, convallis a pretium in, vestibulum sed
-                  turpis. Mauris erat velit, mattis tincidunt orci rutrum,
-                  dignissim auctor ante. Pellentesque volutpat vel libero quis
-                  pellentesque. Suspendisse malesuada ut arcu nec pharetra.
-                  Donec egestas, orci at lobortis finibus, nulla risus rutrum
-                  odio, in efficitur tortor ligula quis mi. Suspendisse sed
-                  felis tellus. Praesent vulputate vitae tortor tincidunt
-                  egestas. Vivamus quis massa dignissim, elementum ex ac,
-                  malesuada sapien. Praesent ultrices quis turpis ac interdum.
-                  Vivamus consequat ligula purus, sit amet dapibus mauris
-                  fermentum ac. Phasellus eleifend eros nec ex laoreet, at
-                  convallis libero sodales. Morbi eget cursus velit. Nulla
-                  tempor tristique placerat. Pellentesque ultricies scelerisque
-                  ante eget convallis.
+                  "Paket Lengkap Make Up Artist" oleh Ameera Beauty bukan hanya
+                  sekadar layanan kecantikan, tetapi juga perjalanan eksplorasi
+                  dan penerimaan diri. Jadikan setiap momen istimewa dengan
+                  tampilan make-up yang mencerminkan keunikan dan kecantikan
+                  Anda. Hubungi kami hari ini untuk membuat janji dan mulailah
+                  perjalanan kecantikan Anda yang tak terlupakan bersama Ameera
+                  Beauty.
                 </Text>
               </View>
             </View>

@@ -131,13 +131,13 @@ const Home = ({ navigation }) => {
                 </ImageBackground>
               </Pressable>
 
-              <View>
+              <Pressable onPress={() => navigation.navigate("Busana")}>
                 <ImageBackground
                   source={BusanaImage}
                   style={styles.category_box}
                   imageStyle={{ borderRadius: 10 }}
                 >
-                  <Pressable onPress={() => navigation.navigate("Makeup")}>
+                  <Pressable onPress={() => navigation.navigate("Busana")}>
                     <View style={styles.Badge_style}>
                       <Text
                         style={{
@@ -151,7 +151,7 @@ const Home = ({ navigation }) => {
                     </View>
                   </Pressable>
                 </ImageBackground>
-              </View>
+              </Pressable>
               <View>
                 <ImageBackground
                   source={MediaImage}
