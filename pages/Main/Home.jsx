@@ -173,27 +173,6 @@ const Home = ({ navigation }) => {
                   </Pressable>
                 </ImageBackground>
               </View>
-              <View>
-                <ImageBackground
-                  source={VendorImage}
-                  style={styles.category_box}
-                  imageStyle={{ borderRadius: 10 }}
-                >
-                  <Pressable onPress={() => navigation.navigate("Makeup")}>
-                    <View style={styles.Badge_style}>
-                      <Text
-                        style={{
-                          fontFamily: "JakartaBold",
-                          fontSize: 12,
-                          color: "white",
-                        }}
-                      >
-                        Vendor
-                      </Text>
-                    </View>
-                  </Pressable>
-                </ImageBackground>
-              </View>
             </View>
           </ScrollView>
           <View style={{ marginTop: 20 }}>
@@ -240,7 +219,10 @@ const Home = ({ navigation }) => {
                     marginBottom: 20,
                   }}
                 >
-                  <View style={styles.cocok_box}>
+                  <Pressable
+                    onPress={() => navigation.navigate("MakeupOne")}
+                    style={styles.cocok_box}
+                  >
                     <View
                       style={{
                         width: "100%",
@@ -284,12 +266,15 @@ const Home = ({ navigation }) => {
                             marginTop: 15,
                           }}
                         >
-                          By Ameera Beauty
+                          By Beauty Salon
                         </Text>
                       </View>
                     </View>
-                  </View>
-                  <View style={styles.cocok_box}>
+                  </Pressable>
+                  <Pressable
+                    onPress={() => navigation.navigate("MakeupTwo")}
+                    style={styles.cocok_box}
+                  >
                     <View
                       style={{
                         width: "100%",
@@ -333,12 +318,15 @@ const Home = ({ navigation }) => {
                             marginTop: 15,
                           }}
                         >
-                          By Ameera Beauty
+                          By Jimani Salon
                         </Text>
                       </View>
                     </View>
-                  </View>
-                  <View style={styles.cocok_box}>
+                  </Pressable>
+                  <Pressable
+                    onPress={() => navigation.navigate("MakeupFour")}
+                    style={styles.cocok_box}
+                  >
                     <View
                       style={{
                         width: "100%",
@@ -382,11 +370,14 @@ const Home = ({ navigation }) => {
                           marginTop: 15,
                         }}
                       >
-                        By Ameera Beauty
+                        By Davinci Salon
                       </Text>
                     </View>
-                  </View>
-                  <View style={styles.cocok_box}>
+                  </Pressable>
+                  <Pressable
+                    onPress={() => navigation.navigate("MakeupThree")}
+                    style={styles.cocok_box}
+                  >
                     <View
                       style={{
                         width: "100%",
@@ -434,7 +425,7 @@ const Home = ({ navigation }) => {
                         </Text>
                       </View>
                     </View>
-                  </View>
+                  </Pressable>
                 </View>
               </ScrollView>
             </View>

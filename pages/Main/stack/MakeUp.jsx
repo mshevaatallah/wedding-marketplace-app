@@ -114,7 +114,7 @@ const MakeUp = ({ navigation }) => {
                 marginBottom: 10,
               }}
             >
-              Banjar Baru, Kalimanatan Selatan
+              Margonda Raya, Depok
             </Text>
             <Text
               style={{
@@ -129,7 +129,10 @@ const MakeUp = ({ navigation }) => {
               Mulai Rp.400.000
             </Text>
           </Pressable>
-          <View style={styles.View_container}>
+          <Pressable
+            onPress={() => navigation.navigate("MakeupTwo")}
+            style={styles.View_container}
+          >
             <View style={styles.box_image}>
               <Image
                 source={cocok2}
@@ -150,7 +153,7 @@ const MakeUp = ({ navigation }) => {
                 marginTop: 10,
               }}
             >
-              The Beauty Salon
+              Jimani Salon
             </Text>
             <Text
               style={{
@@ -162,7 +165,7 @@ const MakeUp = ({ navigation }) => {
                 marginBottom: 10,
               }}
             >
-              Banjar Baru, Kalimanatan Selatan
+              Setiabudi , Jakarta Selatan
             </Text>
             <Text
               style={{
@@ -176,8 +179,11 @@ const MakeUp = ({ navigation }) => {
             >
               Mulai Rp.400.000
             </Text>
-          </View>
-          <View style={styles.View_container}>
+          </Pressable>
+          <Pressable
+            onPress={() => navigation.navigate("MakeupThree")}
+            style={styles.View_container}
+          >
             <View style={styles.box_image}>
               <Image
                 source={cocok3}
@@ -224,8 +230,11 @@ const MakeUp = ({ navigation }) => {
             >
               Mulai Rp.400.000
             </Text>
-          </View>
-          <View style={styles.View_container}>
+          </Pressable>
+          <Pressable
+            onPress={() => navigation.navigate("MakeupFour")}
+            style={styles.View_container}
+          >
             <View style={styles.box_image}>
               <Image
                 source={cocok4}
@@ -272,7 +281,7 @@ const MakeUp = ({ navigation }) => {
             >
               Mulai Rp.400.000
             </Text>
-          </View>
+          </Pressable>
         </View>
       </ScrollView>
     </SafeAreaView>

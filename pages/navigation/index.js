@@ -25,6 +25,9 @@ import AlamatInput from "../Main/AlamatInput";
 import SellerChat from "../Main/stack/details_makeup/SellerChat";
 import PusatBantuan from "../Main/PusatBantuan";
 import EditProfile from "../Main/EditProfile";
+import MakeUpTwo from "../Main/stack/details_makeup/MakeUpTwo";
+import MakeUpFour from "../Main/stack/details_makeup/MakeUpFour";
+import MakeUpThree from "../Main/stack/details_makeup/MakeUpThree";
 
 export const Context = React.createContext(null);
 const Stack = createNativeStackNavigator();
@@ -189,6 +192,21 @@ const AppNavigation = () => {
             <Stack.Screen
               name="MakeupOne"
               component={MakeUpOne}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="MakeupTwo"
+              component={MakeUpTwo}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="MakeupThree"
+              component={MakeUpThree}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="MakeupFour"
+              component={MakeUpFour}
               options={{ headerShown: false }}
             />
             <Stack.Screen
