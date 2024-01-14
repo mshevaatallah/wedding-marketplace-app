@@ -370,7 +370,7 @@ const Home = ({ navigation }) => {
                           marginTop: 15,
                         }}
                       >
-                        By Davinci Salon
+                        By Davinci Artist
                       </Text>
                     </View>
                   </Pressable>

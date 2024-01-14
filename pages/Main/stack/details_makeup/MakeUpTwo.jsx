@@ -123,7 +123,7 @@ const MakeUpTwo = ({ navigation }) => {
                     textDecorationLine: "line-through",
                   }}
                 >
-                  Rp.599.000
+                  Rp.999.000
                 </Text>
                 <Text
                   style={{
@@ -134,7 +134,7 @@ const MakeUpTwo = ({ navigation }) => {
                     lineHeight: 25,
                   }}
                 >
-                  Rp.400.000
+                  Rp.699.000
                 </Text>
                 <Text
                   style={{
@@ -146,7 +146,7 @@ const MakeUpTwo = ({ navigation }) => {
                     marginTop: 15,
                   }}
                 >
-                  Paket Lengkap Make Up Artist By Beauty Salon
+                  Paket Hemat Make Up Artist By Jimani Salon
                 </Text>
                 <Text
                   style={{

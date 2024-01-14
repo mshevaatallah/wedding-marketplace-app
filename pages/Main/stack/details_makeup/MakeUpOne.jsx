@@ -146,7 +146,7 @@ const MakeUpOne = ({ navigation }) => {
                     marginTop: 15,
                   }}
                 >
-                  Paket Lengkap Make Up Artist By Beauty Salon
+                  Paket Lengkap Alis By Beauty Salon
                 </Text>
                 <Text
                   style={{

@@ -146,7 +146,7 @@ const MakeUpFour = ({ navigation }) => {
                     marginTop: 15,
                   }}
                 >
-                  Paket Lengkap Make Up Artist By Beauty Salon
+                  Paket Lengkap Make Up Artist By Ameera Beauty
                 </Text>
                 <Text
                   style={{

@@ -106,7 +106,7 @@ const Transaksi = ({ navigation }) => {
                     letterSpacing: 1,
                   }}
                 >
-                  24 Okt, 13:15 WIB
+                  24 Okt, 18:15 WIB
                 </Text>
               </View>
               <View>
@@ -165,7 +165,7 @@ const Transaksi = ({ navigation }) => {
                     marginBottom: 5,
                   }}
                 >
-                  Atlanta Beauty
+                  Davinci Artist
                 </Text>
                 <Text
                   style={{
@@ -176,7 +176,7 @@ const Transaksi = ({ navigation }) => {
                     marginBottom: 10,
                   }}
                 >
-                  1 Set alat make up
+                  1 Set Swiss Make Up
                 </Text>
                 <Text
                   style={{
@@ -186,7 +186,7 @@ const Transaksi = ({ navigation }) => {
                     letterSpacing: 1,
                   }}
                 >
-                  24 Okt, 13:15 WIB
+                  08 Okt, 13:15 WIB
                 </Text>
               </View>
               <View>
@@ -199,7 +199,7 @@ const Transaksi = ({ navigation }) => {
                     marginBottom: 5,
                   }}
                 >
-                  Rp. 1.000.000
+                  Rp. 1.500.000
                 </Text>
               </View>
             </View>
@@ -245,7 +245,7 @@ const Transaksi = ({ navigation }) => {
                     marginBottom: 5,
                   }}
                 >
-                  Atlanta Beauty
+                  Ameera Beauty
                 </Text>
                 <Text
                   style={{
@@ -266,7 +266,7 @@ const Transaksi = ({ navigation }) => {
                     letterSpacing: 1,
                   }}
                 >
-                  24 Okt, 13:15 WIB
+                  01 Okt, 19:15 WIB
                 </Text>
               </View>
               <View>
@@ -279,7 +279,7 @@ const Transaksi = ({ navigation }) => {
                     marginBottom: 5,
                   }}
                 >
-                  Rp. 1.000.000
+                  Rp. 850.000
                 </Text>
               </View>
             </View>

@@ -146,7 +146,7 @@ const MakeUpThree = ({ navigation }) => {
                     marginTop: 15,
                   }}
                 >
-                  Paket Lengkap Make Up Artist By Beauty Salon
+                  Paket Swiss Make Up By Davinci Salon
                 </Text>
                 <Text
                   style={{
