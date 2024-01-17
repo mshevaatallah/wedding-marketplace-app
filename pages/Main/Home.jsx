@@ -8,7 +8,7 @@ import {
   Image,
   ImageBackground,
 } from "react-native";
-import React, { useCallback } from "react";
+import React, { useCallback, useContext } from "react";
 import { StatusBar } from "expo-status-bar";
 import { useFonts } from "expo-font";
 import Ionicons from "@expo/vector-icons/Ionicons";
@@ -22,7 +22,9 @@ import cocok2 from "../../assets/images/cocok2.jpeg";
 import cocok3 from "../../assets/images/cocok3.jpeg";
 import cocok4 from "../../assets/images/cocok4.jpeg";
 import * as SplashScreen from "expo-splash-screen";
+import { Context } from "../navigation";
 const Home = ({ navigation }) => {
+  const { name } = useContext(Context);
   const [fontsLoaded] = useFonts({
     JakartaRegular: require("../../assets/fonts/JakartaRegular.ttf"),
     JakartaExtraB: require("../../assets/fonts/JakartaExtraB.ttf"),
@@ -60,7 +62,7 @@ const Home = ({ navigation }) => {
                 letterSpacing: 1,
               }}
             >
-              Hello Shev
+              Hello {name}
             </Text>
             <Text
               style={{
