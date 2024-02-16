@@ -31,7 +31,12 @@ const Welcome = ({ navigation }) => {
   }
 
   return (
-    <SafeAreaView onLayout={onLayoutRootView}>
+    <SafeAreaView
+      onLayout={onLayoutRootView}
+      style={{
+        backgroundColor: "white",
+      }}
+    >
       <StatusBar style="dark" />
       <View style={styles.image_container}>
         <Image

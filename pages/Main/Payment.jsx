@@ -100,7 +100,7 @@ const Payment = ({ navigation }) => {
               }}
             >
               <Ionicons
-                name="card-outline"
+                name="hand-left-outline"
                 size={40}
                 suppressHighlighting={true}
                 onPress={() => navigation.goBack()}
@@ -123,7 +123,7 @@ const Payment = ({ navigation }) => {
                     marginBottom: 5,
                   }}
                 >
-                  Kartu Debit
+                  Cash On Delivery
                 </Text>
                 <Text
                   style={{
@@ -133,7 +133,7 @@ const Payment = ({ navigation }) => {
                     letterSpacing: 1,
                   }}
                 >
-                  213232322
+                  Wedding Click Express
                 </Text>
               </View>
             </Pressable>
@@ -375,7 +375,10 @@ const Payment = ({ navigation }) => {
           </Text>
         </View>
       </View>
-      <Pressable style={styles.button_beli}>
+      <Pressable
+        style={styles.button_beli}
+        onPress={() => navigation.navigate("PaymentSuccess")}
+      >
         <Text
           style={{
             fontFamily: "JakartaExtraB",

@@ -37,6 +37,7 @@ import MediaOne from "../Main/stack/details_media/MediaOne";
 import MediaTwo from "../Main/stack/details_media/MediaTwo";
 import MediaThree from "../Main/stack/details_media/MediaThree";
 import MediaFour from "../Main/stack/details_media/MediaFour";
+import PaymentSuccess from "../Main/PaymentSuccess";
 
 export const Context = React.createContext(null);
 const Stack = createNativeStackNavigator();
@@ -292,6 +293,11 @@ const AppNavigation = () => {
               <Stack.Screen
                 name="EditProfile"
                 component={EditProfile}
+                options={{ headerShown: false }}
+              />
+              <Stack.Screen
+                name="PaymentSuccess"
+                component={PaymentSuccess}
                 options={{ headerShown: false }}
               />
             </Stack.Navigator>

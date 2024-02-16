@@ -332,8 +332,9 @@ export default RegisterAccount;
 
 const styles = StyleSheet.create({
   main_container: {
-    marginHorizontal: 20,
+    paddingHorizontal: 20,
     flex: 1,
+    backgroundColor: "white",
   },
   button_style: {
     width: "100%",
